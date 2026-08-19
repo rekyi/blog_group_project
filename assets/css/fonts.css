@@ -1,0 +1,89 @@
+/* arima-regular - latin */
+@font-face {
+    font-display: swap;
+    font-family: 'Arima';
+    font-style: normal;
+    font-weight: 400;
+    src: url('../fonts/arima-v7-latin-regular.woff2') format('woff2');
+}
+
+/* arima-500 - latin */
+@font-face {
+    font-display: swap;
+    font-family: 'Arima';
+    font-style: normal;
+    font-weight: 500;
+    src: url('../fonts/arima-v7-latin-500.woff2') format('woff2');
+}
+
+/* arima-600 - latin */
+@font-face {
+    font-display: swap;
+    font-family: 'Arima';
+    font-style: normal;
+    font-weight: 600;
+    src: url('../fonts/arima-v7-latin-600.woff2') format('woff2');
+}
+
+/* arima-700 - latin */
+@font-face {
+    font-display: swap;
+    font-family: 'Arima';
+    font-style: normal;
+    font-weight: 700;
+    src: url('../fonts/arima-v7-latin-700.woff2') format('woff2');
+}
+
+/* palanquin-regular - latin */
+@font-face {
+    font-display: swap;
+    font-family: 'Palanquin';
+    font-style: normal;
+    font-weight: 400;
+    src: url('../fonts/palanquin-v17-latin-regular.woff2') format('woff2');
+}
+
+/* palanquin-500 - latin */
+@font-face {
+    font-display: swap;
+    font-family: 'Palanquin';
+    font-style: normal;
+    font-weight: 500;
+    src: url('../fonts/palanquin-v17-latin-500.woff2') format('woff2');
+}
+
+/* palanquin-600 - latin */
+@font-face {
+    font-display: swap;
+    font-family: 'Palanquin';
+    font-style: normal;
+    font-weight: 600;
+    src: url('../fonts/palanquin-v17-latin-600.woff2') format('woff2');
+}
+
+/* palanquin-700 - latin */
+@font-face {
+    font-display: swap;
+    font-family: 'Palanquin';
+    font-style: normal;
+    font-weight: 700;
+    src: url('../fonts/palanquin-v17-latin-700.woff2') format('woff2');
+}
+
+/* palanquin-dark-regular - latin */
+@font-face {
+    font-display: swap;
+    font-family: 'Palanquin Dark';
+    font-style: normal;
+    font-weight: 400;
+    src: url('../fonts/palanquin-dark-v17-latin-regular.woff2') format('woff2');
+}
+
+/* palanquin-dark-600 - latin */
+@font-face {
+    font-display: swap;
+    font-family: 'Palanquin Dark';
+    font-style: normal;
+    font-weight: 600;
+    src: url('../fonts/palanquin-dark-v17-latin-600.woff2') format('woff2');
+}
