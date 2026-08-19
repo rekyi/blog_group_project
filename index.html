@@ -228,26 +228,30 @@
 
     <!-- BENNI ARBEITET AB HIER - FINGER WEG -->
 
-    <section class="contact">
+    <section class="contact" id="contact">
       <div class="contact-content">
-        <img src="assets/icon/contact_form_pin.svg" alt="" />
-        <h2>Contact form</h2>
+        <h2 class="section-title">
+          <img src="assets/icon/contact_form_pin.svg" alt="" width="36" height="42" />
+          Contact form
+        </h2>
         <p>Have a question or an idea to collaborate? Get in touch—I’d love to hear from you and explore how we can work together.</p>
 
         <form class="contact-form">
-          <div class="contact-form-group">
-            <label for="name">What's your name?</label>
-            <input type="text" id="name" name="name" />
-          </div>
+          <div class="contact-form-row">
+            <div class="contact-form-group">
+              <label for="name">What's your name?</label>
+              <input type="text" id="name" name="name" />
+            </div>
 
-          <div class="contact-form-group">
-            <label for="email">What's your email?</label>
-            <input type="email" id="email" name="email" />
+            <div class="contact-form-group">
+              <label for="email">What's your email?</label>
+              <input type="email" id="email" name="email" />
+            </div>
           </div>
 
           <div class="contact-form-group">
             <label for="question">How can I help?</label>
-            <input type="text" id="question" name="question" />
+            <textarea name="question" id="question" rows="4"></textarea>
           </div>
 
           <div class="contact-form-checkbox">
