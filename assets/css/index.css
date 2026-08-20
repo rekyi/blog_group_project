@@ -169,6 +169,9 @@ body {
 /* SELIM FAQ CSS
 
 */
+.desktop-nav{
+  visibility: hidden;
+}
 
 .faq-section {
   border-top: 3px solid #4EA487;
