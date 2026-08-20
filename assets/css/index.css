@@ -6,56 +6,170 @@
 
 
 
-/* ALICE HERO UND CAROUSEL CSS
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+/* ALICE HERO UND HIGHLIGHTS CSS 
 */
+
+.hero {
+    overflow: hidden;
+}
+
+.hero-content {
+    position: relative;
+    height: 600px;
+    width: 1700px;
+}
+
+.hero-background-picture {
+    position: absolute;
+    height: 600px;
+    top: 0;
+    left: -800px;
+    z-index: 1;
+}
+
+.hero-graphic-element {
+    position: absolute;
+    height: 300px;
+    top: 0;
+    left: -90px;
+    z-index: 2;
+}
+
+.hero-patch {
+    position: absolute;
+    height: 150px;
+    top: 150px;
+    left: 80px;
+    z-index: 3;
+
+    animation: rotate 20s linear infinite;
+}
+
+@keyframes rotate {
+    from {
+        transform: rotate(360deg);
+    }
+
+    to {
+        transform: rotate(0deg);
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+.highlights {
+    padding: 80px 16px;
+}
+
+
+.highlights-headline {
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+    align-items: center;
+}
+
+.highlights-headline h2 {
+    font-size: 40px;
+    font-family: 'Arima';
+    font-weight: 700;
+}
+
+
+.slider_a_container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 16px;
+}
+
+.slider_a {
+    position: relative;
+
+    background-color: black;
+
+    width: 250px;
+    height: 150px;
+
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+
+    overflow: hidden;
+}
+
+.slider_a input {
+    z-index: 2;
+}
+
+.slider_a_wrapper {
+    z-index: 1;
+
+    width: 300%;
+    height: 100%;
+
+    position: absolute;
+    display: flex;
+
+    transition: all 1s ease-in-out;
+}
+
+.slider_a_element {
+    width: calc(100% / 3);
+    height: 100%;
+}
+
+.element_one {
+    background-color: aquamarine;
+}
+
+.element_two {
+    background-color: brown;
+}
+
+.element_three {
+    background-color: goldenrod;
+}
+
+.slider_a input[value="one"]:checked~.slider_a_wrapper {
+    transform: translateX(calc(100% / 3));
+
+}
+
+.slider_a input[value="two"]:checked~.slider_a_wrapper {
+    transform: translateX(0);
+
+}
+
+.slider_a input[value="three"]:checked~.slider_a_wrapper {
+    transform: translateX(calc(-100% / 3));
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
