@@ -1,9 +1,114 @@
 /* SELIM HEADER + NAVBAR UND FOOTER + NAVBAR KOMMT IN global.css   
 */
+/* Header mit Logo */
+.logo-header {
+  background-color: #4EA487;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 12px 0;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.logo-header .logo {
+  height: 48px;
+  width: auto;
+}
+
+html {
+  scroll-behavior: smooth;
+}
 
 
+/* Navbar unten */
+.bottom-navbar {
+  background-color: #F1C953;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 12px 0;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  z-index: 100;
+}
+
+.bottom-navbar a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.bottom-navbar img {
+  height: 26px;
+  width: auto;
+}
+
+/* Damit Content nicht unter der fixen Navbar verschwindet */
+body {
+  padding-bottom: 64px;
+}
 
 
+/* Footer direkt über der Navbar */
+.site-footer {
+  background-color: #4EA487;
+  padding: 20px 16px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+
+.footer-links {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.footer-links a {
+  color: #FFFFFF;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+.footer-links a:hover {
+  text-decoration: underline;
+}
+
+.copyright {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  color: #FFFFFF;
+  font-size: 14px;
+  margin: 0;
+}
+
+.copyright-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 16px;
+  height: 16px;
+  border: 1px solid #FFFFFF;
+  border-radius: 50%;
+  font-size: 11px;
+  line-height: 1;
+}
+
+.footer-social {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+
+.footer-social img {
+  height: 28px;
+  width: auto;
+}
 
 
 /* ALICE HERO UND HIGHLIGHTS CSS 
@@ -177,59 +282,99 @@
 
 /* SELIM FAQ CSS
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 */
 
+.faq-section {
+  border-top: 3px solid #4EA487;
+  padding: 20px 16px 32px;
+}
+
+.faq-title {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  color: #4EA487;
+  font-size: 24px;
+  margin: 12px 0 20px;
+}
+
+.faq-title-icon {
+  width: 26px;
+  height: auto;
+}
+
+.faq-list {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.faq-item {
+  border: 6px solid #F1C953;
+  border-radius: 14px;
+  background-color: #FFFFFF;
+  overflow: hidden;
+}
+
+.faq-item[open] {
+  padding: 0 8px 8px;
+}
+
+/* Standard-Dreieck des Browsers ausblenden */
+.faq-question {
+  background-color: #F1C953;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+  padding: 14px 16px;
+  font-size: 15px;
+  font-weight: 700;
+  color: #1a1a1a;
+}
+
+.faq-item[open] .faq-question {
+  margin: -6px -8px 0;
+  width: calc(100% + 16px);
+}
+
+.faq-question::-webkit-details-marker {
+  display: none;
+}
+
+/* Eigenes Chevron-Icon per CSS */
+.faq-question::after {
+  content: "";
+  flex-shrink: 0;
+  width: 10px;
+  height: 10px;
+  border-right: 2px solid #1a1a1a;
+  border-bottom: 2px solid #1a1a1a;
+  transform: rotate(45deg);
+  transition: transform 0.2s ease;
+}
+
+/* Pfeil zeigt nach oben, wenn Details offen ist */
+.faq-item[open] .faq-question::after {
+  transform: rotate(-135deg);
+}
+
+.faq-answer {
+  background-color: #FFFFFF;
+  border-radius: 10px;
+  margin-top: 8px;
+  overflow: hidden;
+}
+
+.faq-answer p {
+  margin: 0;
+  padding: 14px 16px;
+  font-size: 14px;
+  line-height: 1.5;
+  color: #333333;
+}
 
 
 
