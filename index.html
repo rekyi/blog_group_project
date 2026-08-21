@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="assets/css/global.css" />
     <link rel="stylesheet" href="assets/css/index.css" />
   </head>
+
   <body>
     <!-- SELIM ARBEITET AB HIER - FINGER WEG -->
     <header class="logo-header">
@@ -17,15 +18,21 @@
 
     <!-- ... restlicher Content ... -->
 
-    <header>
+    <header id="logo-header" class="logo-header">
       <a href="">
-        <img src="" alt="" />
+        <img src="assets/icon/favicon.svg" alt="Travel Blog Logo" class="logo" />
       </a>
-      <nav class="desktop-nav">
+      <nav id="desktop-nav" class="desktop-nav">
         <ul class="nav-bar">
-          <li><a href="#">Highlights</a></li>
-          <li><a href="#">FAQ</a></li>
-          <li><a href="#">Contact</a></li>
+          <li class="menu-item">
+            <a href="#highlights" class="menu-link">Highlights</a>
+          </li>
+          <li class="menu-item">
+            <a href="#faq" class="menu-link">FAQ</a>
+          </li>
+          <li class="menu-item">
+            <a href="#contact" class="menu-link">Contact</a>
+          </li>
         </ul>
       </nav>
     </header>
@@ -39,7 +46,6 @@
     <!-- ALICA ARBEITET AB HIER - FINGER WEG -->
     <section class="hero">
       <div class="hero-content">
-        <!-- Falls mehr/weniger img benötigt, einfügen/entfernen. -->
         <img class="hero-patch" src="./assets/img/hero_circle.png" alt="Patch about Turkey Cappadocia" />
         <img class="hero-graphic-element" src="./assets/img/hero_wave.png" alt="graphic element" />
         <img
@@ -63,9 +69,48 @@
           <input type="radio" name="slider" value="three" />
 
           <div class="slider_a_wrapper">
-            <div class="slider_a_element element_one"></div>
-            <div class="slider_a_element element_two"></div>
-            <div class="slider_a_element element_three"></div>
+            <div class="slider_a_element element_one">
+              <a href="article-carousel.html">
+                <img src="./assets/img/carousel1_01.jpg" alt="Beaches" width="1920" height="1280" />
+              </a>
+              <div class="text-block">
+                <div class="text-content">
+                  <h3>The World’s Most Breathtaking Beaches</h3>
+                  <p>
+                    From powder-soft white sands to dramatic coastlines kissed by turquoise waves, these beaches are more than destinations — they’re
+                    feelings.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="slider_a_element element_two">
+              <a href="article-video.html">
+                <img src="./assets/img/carousel1_02.png" alt="Copenhagen" />
+              </a>
+              <div class="text-block">
+                <div class="text-content">
+                  <h3>Copenhagen in 3 Days: Big Experiences, Smart Spending</h3>
+                  <p>Discover Copenhagen, where historic charm meets modern design, vibrant cycling culture and waterfront living.</p>
+                </div>
+              </div>
+            </div>
+            <div class="slider_a_element element_three">
+              <a href="article-graph.html">
+                <img src="./assets/img/carousel1_03.jpg" alt="Thailand" />
+              </a>
+              <div class="text-block">
+                <div class="text-content">
+                  <h3>
+                    Pattaya Pulse: <br />
+                    Food, Sun and Neon Nights
+                  </h3>
+                  <p>
+                    From bustling promenades to nearby islands, the city offers an energetic and diverse escape. Discover Pattaya City, with vibrant
+                    nightlife and rich cultural landmarks.
+                  </p>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
@@ -78,57 +123,7 @@
     
     
     
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
     ALICA ARBEITET BIS HIER - FINGER WEG
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-
-
-
-    
-    
     
     
     
@@ -137,7 +132,7 @@
     -->
 
     <!-- SELIM ARBEITET AB HIER - FINGER WEG -->
-    <section class="faq-section">
+    <section id="faq" class="faq-section">
       <h2 class="faq-title">
         <img src="assets/icon/faq_help.svg" alt="" class="faq-title-icon" />
         FAQ
@@ -357,7 +352,7 @@
     <!-- SELIM ARBEITET AB HIER - FINGER WEG -->
 
     <footer class="site-footer">
-      <div class="footer-links">
+      <div class="footer-left">
         <a href="#">Imprint</a>
         <a href="#">Cookie Preferences</a>
         <p class="copyright"><span class="copyright-icon">&copy;</span> Travel Blog 2026</p>
@@ -371,50 +366,11 @@
       </div>
     </footer>
 
-    <!--    <footer>
-      <div class="footer-left">
-        <small>© Travel Blog 2026</small>
-        <ul class="footer-policy">
-          <li><a href="#">Imprint</a></li>
-          <li><a href="#">Cookie Preferences</a></li>
-        </ul>
-      </div>
-      <ul class="footer-right">
-        <li>
-          <a href="" target="_blank">
-            <img src="" alt="" />
-          </a>
-        </li>
-        <li>
-          <a href="" target="_blank">
-            <img src="" alt="" />
-          </a>
-        </li>
-        <li>
-          <a href="" target="_blank">
-            <img src="" alt="" />
-          </a>
-        </li>
-        <li>
-          <a href="" target="_blank">
-            <img src="" alt="" />
-          </a>
-        </li>
-      </ul>
-    </footer>
-
-    <nav>
-      <img src="" alt="" />
-      <img src="" alt="" />
-      <img src="" alt="" />
-      <img src="" alt="" />
-    </nav>
-  -->
     <nav class="bottom-navbar">
-      <a href="#"><img src="assets/icon/mobile_navbar_home.svg" alt="Home" /></a>
-      <a href="#"><img src="assets/icon/mobile_navbar_rocket.svg" alt="Highlights" /></a>
-      <a href="#"><img src="assets/icon/mobile_navbar_help.svg" alt="Hilfe" /></a>
-      <a href="#"><img src="assets/icon/mobile_navbar_pin.svg" alt="Profil" /></a>
+      <a href="#desktop-nav"><img src="assets/icon/mobile_navbar_home.svg" alt="Home" /></a>
+      <a href="#highlights"><img src="assets/icon/mobile_navbar_rocket.svg" alt="Highlights" /></a>
+      <a href="#faq"><img src="assets/icon/mobile_navbar_help.svg" alt="Hilfe" /></a>
+      <a href="#profil"><img src="assets/icon/mobile_navbar_pin.svg" alt="Profil" /></a>
     </nav>
   </body>
 </html>
