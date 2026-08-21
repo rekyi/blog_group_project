@@ -1,0 +1,42 @@
+.share {
+    width: 100%;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    p {
+        text-align: center;
+
+        font-family: 'Arima', sans-serif;
+        font-weight: 500;
+        font-size: 1.125rem;
+    }
+}
+
+
+
+
+
+.share-btn {
+    width: 160px;
+    height: 50px;
+    display: block;
+    margin: 2.5rem auto 5rem;
+    font-family: 'Arima', sans-serif;
+    font-weight: 700;
+    font-size: 1.5rem;
+    border-radius: 40px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: .625rem;
+
+
+    background-color: var(--color-primary-green);
+    color: var(--color-primary-yellow);
+    border: none;
+    cursor: pointer;
+
+}
