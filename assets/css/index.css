@@ -1,8 +1,44 @@
 /* SELIM HEADER + NAVBAR UND FOOTER + NAVBAR KOMMT IN global.css   
 */
+
+/* Navbar oben */
+.nav-bar {
+  display: flex;
+  list-style-type: none;
+
+}
+
+.menu {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  gap: 48px;
+  margin: 0;
+  padding: 0;
+}
+
+.menu-link {
+  display: inline-block;
+  padding: 12px 4px 10px;
+  font-weight: 700;
+  font-size: 20px;
+  letter-spacing: 0.3px;
+  color: #ffffff;
+  text-decoration: none;
+  text-shadow: 2px 2px 0 var(--secondary-brown);
+
+
+}
+
+.menu-link:focus-visible {
+  outline: 2px solid var(--primary-yellow);
+  outline-offset: 3px;
+  border-radius: 3px;
+}
+
 /* Header mit Logo */
 .logo-header {
-  background-color: #4EA487;
+  background-color: var(--color-primary-green);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -10,6 +46,16 @@
   position: sticky;
   top: 0;
   z-index: 100;
+
+    @media screen and (max-width: 768px) {
+    .desktop-nav{
+    display: none;
+    }
+    .logo-img {
+      width: 48px;
+      height: 48px;
+    }
+  }
 }
 
 .logo-header .logo {
@@ -17,14 +63,11 @@
   width: auto;
 }
 
-html {
-  scroll-behavior: smooth;
-}
 
 
 /* Navbar unten */
 .bottom-navbar {
-  background-color: #F1C953;
+  background-color: var(--color-primary-yellow);
   display: flex;
   justify-content: space-around;
   align-items: center;
@@ -55,20 +98,20 @@ body {
 
 /* Footer direkt über der Navbar */
 .site-footer {
-  background-color: #4EA487;
+  background-color: var(--color-primary-green);
   padding: 20px 16px;
   display: flex;
   justify-content: space-between;
   align-items: flex-end;
 }
 
-.footer-links {
+.footer-left {
   display: flex;
   flex-direction: column;
   gap: 8px;
 }
 
-.footer-links a {
+.footer-left a {
   color: #FFFFFF;
   text-decoration: none;
   font-size: 14px;
@@ -169,12 +212,10 @@ body {
 /* SELIM FAQ CSS
 
 */
-.desktop-nav{
-  visibility: hidden;
-}
+
 
 .faq-section {
-  border-top: 3px solid #4EA487;
+  border-top: 3px solid var(--color-primary-green);
   padding: 20px 16px 32px;
 }
 
@@ -183,10 +224,14 @@ body {
   align-items: center;
   justify-content: center;
   gap: 8px;
-  color: #4EA487;
-  font-size: 24px;
+  font-family: 'Arima', sans-serif;
+  color: var(--color-primary-green);
+  font-size: 2,5rem;
+  font-weight: 700;
   margin: 12px 0 20px;
 }
+
+
 
 .faq-title-icon {
   width: 26px;
@@ -200,7 +245,7 @@ body {
 }
 
 .faq-item {
-  border: 6px solid #F1C953;
+  border: 6px solid var(--color-primary-yellow);
   border-radius: 14px;
   background-color: #FFFFFF;
   overflow: hidden;
@@ -212,16 +257,18 @@ body {
 
 /* Standard-Dreieck des Browsers ausblenden */
 .faq-question {
-  background-color: #F1C953;
+  background-color: var(--color-primary-yellow);
   width: 100%;
   display: flex;
   justify-content: space-between;
   align-items: center;
   gap: 12px;
   padding: 14px 16px;
-  font-size: 15px;
+  font-family: 'Palanquin', sans-serif;
+  font-size: 1rem;
   font-weight: 700;
-  color: #1a1a1a;
+  color: var(--color-secondary-brown);
+
 }
 
 .faq-item[open] .faq-question {
@@ -242,7 +289,6 @@ body {
   border-right: 2px solid #1a1a1a;
   border-bottom: 2px solid #1a1a1a;
   transform: rotate(45deg);
-  transition: transform 0.2s ease;
 }
 
 /* Pfeil zeigt nach oben, wenn Details offen ist */
@@ -255,6 +301,9 @@ body {
   border-radius: 10px;
   margin-top: 8px;
   overflow: hidden;
+  font-family: 'Palanquin', sans-serif;
+  font-size: 1rem;
+  font-weight: 500;
 }
 
 .faq-answer p {
@@ -262,7 +311,9 @@ body {
   padding: 14px 16px;
   font-size: 14px;
   line-height: 1.5;
-  color: #333333;
+
+  color: var(--color-text-main: #3D3D3D);
+  
 }
 
 

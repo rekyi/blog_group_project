@@ -11,21 +11,25 @@
   </head>
   <body>
     <!-- SELIM ARBEITET AB HIER - FINGER WEG -->
-<header class="logo-header">
-  <img src="assets/icon/favicon.svg" alt="Travel Blog Logo" class="logo">
-</header>
+
 
 <!-- ... restlicher Content ... -->
 
-    <header>
+    <header id="logo-header" class="logo-header">
       <a href="">
-        <img src="" alt="" />
+        <img src="assets/icon/favicon.svg" alt="Travel Blog Logo" class="logo"/>
       </a>
-      <nav class="desktop-nav">
+      <nav id="desktop-nav" class="desktop-nav">
         <ul class="nav-bar">
-          <li><a href="#">Highlights</a></li>
-          <li><a href="#">FAQ</a></li>
-          <li><a href="#">Contact</a></li>
+        <li class="menu-item">
+          <a href="#highlights" class="menu-link">Highlights</a>
+        </li>
+        <li class="menu-item">
+          <a href="#faq" class="menu-link">FAQ</a>
+        </li>
+        <li class="menu-item">
+          <a href="#contact" class="menu-link">Contact</a>
+        </li>
         </ul>
       </nav>
     </header>
@@ -46,7 +50,7 @@
       </div>
     </section>
 
-    <section class="highlights">
+    <section id="highlights" class="highlights">
       <div class="highlights-content">
         <img src="" alt="" />
         <h2>Highlights</h2>
@@ -126,7 +130,7 @@
     -->
 
     <!-- SELIM ARBEITET AB HIER - FINGER WEG -->
-  <section class="faq-section">
+  <section id="faq" class="faq-section">
   <h2 class="faq-title">
     <img src="assets/icon/faq_help.svg" alt="" class="faq-title-icon">
     FAQ
@@ -231,7 +235,7 @@
 
     <!-- BENNI ARBEITET AB HIER - FINGER WEG -->
 
-    <section class="contact">
+    <section id="contact" class="contact">
       <div class="contact-content">
         <img src="assets/icon/contact_form_pin.svg" alt="" />
         <h2>Contact form</h2>
@@ -337,7 +341,7 @@
     <!-- SELIM ARBEITET AB HIER - FINGER WEG -->
 
 <footer class="site-footer">
-  <div class="footer-links">
+  <div class="footer-left">
     <a href="#">Imprint</a>
     <a href="#">Cookie Preferences</a>
     <p class="copyright">
@@ -352,51 +356,12 @@
     <a href="https://www.instagram.com/" target="_blank"><img src="assets/icon/footer_instagram.svg" alt="Instagram"></a>
   </div>
 </footer>
-
-<!--    <footer>
-      <div class="footer-left">
-        <small>© Travel Blog 2026</small>
-        <ul class="footer-policy">
-          <li><a href="#">Imprint</a></li>
-          <li><a href="#">Cookie Preferences</a></li>
-        </ul>
-      </div>
-      <ul class="footer-right">
-        <li>
-          <a href="" target="_blank">
-            <img src="" alt="" />
-          </a>
-        </li>
-        <li>
-          <a href="" target="_blank">
-            <img src="" alt="" />
-          </a>
-        </li>
-        <li>
-          <a href="" target="_blank">
-            <img src="" alt="" />
-          </a>
-        </li>
-        <li>
-          <a href="" target="_blank">
-            <img src="" alt="" />
-          </a>
-        </li>
-      </ul>
-    </footer>
-
-    <nav>
-      <img src="" alt="" />
-      <img src="" alt="" />
-      <img src="" alt="" />
-      <img src="" alt="" />
-    </nav>
-  -->    
+   
   <nav class="bottom-navbar">
-  <a href="#"><img src="assets/icon/mobile_navbar_home.svg" alt="Home"></a>
-  <a href="#"><img src="assets/icon/mobile_navbar_rocket.svg" alt="Highlights"></a>
-  <a href="#"><img src="assets/icon/mobile_navbar_help.svg" alt="Hilfe"></a>
-  <a href="#"><img src="assets/icon/mobile_navbar_pin.svg" alt="Profil"></a>
+  <a href="#desktop-nav"><img src="assets/icon/mobile_navbar_home.svg" alt="Home"></a>
+  <a href="#highlights"><img src="assets/icon/mobile_navbar_rocket.svg" alt="Highlights"></a>
+  <a href="#faq"><img src="assets/icon/mobile_navbar_help.svg" alt="Hilfe"></a>
+  <a href="#profil"><img src="assets/icon/mobile_navbar_pin.svg" alt="Profil"></a>
 </nav>
 
   </body>
