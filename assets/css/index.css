@@ -1,8 +1,44 @@
 /* SELIM HEADER + NAVBAR UND FOOTER + NAVBAR KOMMT IN global.css   
 */
+
+/* Navbar oben */
+.nav-bar {
+    display: flex;
+    list-style-type: none;
+
+}
+
+.menu {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    gap: 48px;
+    margin: 0;
+    padding: 0;
+}
+
+.menu-link {
+    display: inline-block;
+    padding: 12px 4px 10px;
+    font-weight: 700;
+    font-size: 20px;
+    letter-spacing: 0.3px;
+    color: #ffffff;
+    text-decoration: none;
+    text-shadow: 2px 2px 0 var(--secondary-brown);
+
+
+}
+
+.menu-link:focus-visible {
+    outline: 2px solid var(--primary-yellow);
+    outline-offset: 3px;
+    border-radius: 3px;
+}
+
 /* Header mit Logo */
 .logo-header {
-    background-color: #4EA487;
+    background-color: var(--color-primary-green);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -10,6 +46,17 @@
     position: sticky;
     top: 0;
     z-index: 100;
+
+    @media screen and (max-width: 768px) {
+        .desktop-nav {
+            display: none;
+        }
+
+        .logo-img {
+            width: 48px;
+            height: 48px;
+        }
+    }
 }
 
 .logo-header .logo {
@@ -17,14 +64,11 @@
     width: auto;
 }
 
-html {
-    scroll-behavior: smooth;
-}
 
 
 /* Navbar unten */
 .bottom-navbar {
-    background-color: #F1C953;
+    background-color: var(--color-primary-yellow);
     display: flex;
     justify-content: space-around;
     align-items: center;
@@ -55,20 +99,20 @@ body {
 
 /* Footer direkt über der Navbar */
 .site-footer {
-    background-color: #4EA487;
+    background-color: var(--color-primary-green);
     padding: 20px 16px;
     display: flex;
     justify-content: space-between;
     align-items: flex-end;
 }
 
-.footer-links {
+.footer-left {
     display: flex;
     flex-direction: column;
     gap: 8px;
 }
 
-.footer-links a {
+.footer-left a {
     color: #FFFFFF;
     text-decoration: none;
     font-size: 14px;
@@ -326,8 +370,9 @@ body {
 
 */
 
+
 .faq-section {
-    border-top: 3px solid #4EA487;
+    border-top: 3px solid var(--color-primary-green);
     padding: 20px 16px 32px;
 }
 
@@ -336,10 +381,14 @@ body {
     align-items: center;
     justify-content: center;
     gap: 8px;
-    color: #4EA487;
-    font-size: 24px;
+    font-family: 'Arima', sans-serif;
+    color: var(--color-primary-green);
+    font-size: 2, 5rem;
+    font-weight: 700;
     margin: 12px 0 20px;
 }
+
+
 
 .faq-title-icon {
     width: 26px;
@@ -353,7 +402,7 @@ body {
 }
 
 .faq-item {
-    border: 6px solid #F1C953;
+    border: 6px solid var(--color-primary-yellow);
     border-radius: 14px;
     background-color: #FFFFFF;
     overflow: hidden;
@@ -365,16 +414,18 @@ body {
 
 /* Standard-Dreieck des Browsers ausblenden */
 .faq-question {
-    background-color: #F1C953;
+    background-color: var(--color-primary-yellow);
     width: 100%;
     display: flex;
     justify-content: space-between;
     align-items: center;
     gap: 12px;
     padding: 14px 16px;
-    font-size: 15px;
+    font-family: 'Palanquin', sans-serif;
+    font-size: 1rem;
     font-weight: 700;
-    color: #1a1a1a;
+    color: var(--color-secondary-brown);
+
 }
 
 .faq-item[open] .faq-question {
@@ -395,7 +446,6 @@ body {
     border-right: 2px solid #1a1a1a;
     border-bottom: 2px solid #1a1a1a;
     transform: rotate(45deg);
-    transition: transform 0.2s ease;
 }
 
 /* Pfeil zeigt nach oben, wenn Details offen ist */
@@ -408,6 +458,9 @@ body {
     border-radius: 10px;
     margin-top: 8px;
     overflow: hidden;
+    font-family: 'Palanquin', sans-serif;
+    font-size: 1rem;
+    font-weight: 500;
 }
 
 .faq-answer p {
@@ -415,62 +468,112 @@ body {
     padding: 14px 16px;
     font-size: 14px;
     line-height: 1.5;
-    color: #333333;
+
+    color: var(--color-text-main: #3D3D3D);
+
 }
 
 
+.contact {
+    color: var(--color-secondary-brown);
 
 
-/* BENNI CONTACT FORM CSS
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    p {
+        display: none;
+    }
+
+}
+
+.section-title {
+    font-family: 'Arima', sans-serif;
+    font-weight: 700;
+    font-size: 2.5rem;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+
+}
+
+.contact-form {
+    padding-inline: 1.5rem;
+
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    height: 3rem;
+    border: none;
+    border-bottom: 1px solid var(--color-secondary-brown);
+
+    resize: vertical;
+    min-height: 3rem;
+    max-height: 10rem;
+    font-size: 1rem;
+
+    font-family: 'Palanquin', sans-serif;
+    font-weight: 400;
+    font-size: 1.5rem;
+    color: var(--color-primary-green);
+
+    scrollbar-width: none;
+}
 
 
+.contact-form-checkbox {
+    max-width: 375px;
+    width: 100%;
 
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
 
+    input {
+        width: 1.5rem;
+        height: 1.5rem;
+        margin-bottom: 2rem;
+        color: var(--color-secondary-brown);
+        flex-shrink: 0;
+    }
 
+    label {
+        color: var(--color-secondary-brown);
+        font-family: 'Palanquin', sans-serif;
+        font-weight: 400;
+        font-size: 1rem;
 
+        a {
+            text-decoration: none;
+            color: var(--color-primary-green);
+            font-weight: 500;
+            padding-inline: 0.5rem;
+        }
 
+    }
+}
 
+.contact-form-group {
+    font-family: 'Palanquin', sans-serif;
+    font-weight: 500;
+    font-size: 1.5rem;
+    padding-top: 2rem;
 
+    display: flex;
+    flex-direction: column;
+    align-items: start;
 
+    width: 100%;
+    max-width: 375px;
+    margin: 0 auto;
+}
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-*/
+.btn-submit {
+    display: block;
+    margin: 2.5rem auto 5rem;
+}
