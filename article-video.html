@@ -14,20 +14,28 @@
       <div>
         <p>Follow me for more content like this, and share the article with your friends!</p>
       </div>
-      <img src="assets/icon/article_share_arrow.svg" alt="" width="32" height="53" />
-      <details>
-        <summary class="share-btn">
-          <img src="assets/icon/article_share.svg" alt="" width="24" height="27" />
-          Share
-        </summary>
 
-        <div class="share-content">
-          <div class="share-links">
-            <a href="" target="_blank">LinkedIn</a>
-            <a href="" target="_blank">WhatsApp</a>
+      <div class="share-action">
+        <picture>
+          <source media="(min-width: 768px)" srcset="assets/icon/article_share_arrow_desktop.svg" width="95" height="98" />
+          <img class="share-arrow" src="assets/icon/article_share_arrow.svg" alt="" width="32" height="53" />
+        </picture>
+
+        <details class="share-details">
+          <summary class="share-btn">
+            <img class="share-icon-inside" src="assets/icon/article_share.svg" alt="" width="24" height="27" />
+            <span>Share</span>
+          </summary>
+
+          <div class="share-content">
+            <img src="assets/icon/article_shared_small.svg" alt="" width="16" height="18" />
+            <div class="share-links">
+              <a href="#" onclick="return false;" target="_blank">LinkedIn</a>
+              <a href="#" onclick="return false;" target="_blank">WhatsApp</a>
+            </div>
           </div>
-        </div>
-      </details>
+        </details>
+      </div>
     </section>
   </body>
 </html>
