@@ -63,7 +63,11 @@ h2 {
 
 
 p {
-    color: var(--color-text-main);
+    color: var(--color-secondary-brown);
+
+    @media (min-width: 768px) {
+        color: var(--color-text-main);
+    }
 }
 
 
