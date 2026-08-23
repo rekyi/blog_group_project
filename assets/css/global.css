@@ -121,7 +121,8 @@ p {
   justify-content: center;
   align-items: center;
   padding: 12px 0;
-  position: sticky;
+  width: 100%;
+  position: relative;
   top: 0;
   z-index: 100;
 
@@ -147,7 +148,8 @@ p {
 
 .site-footer {
   background-color: var(--color-primary-green);
-  padding: 20px 16px;
+  width: 100%;
+  padding: 20px 16px 64px 16px;
   display: flex;
   justify-content: space-between;
   align-items: flex-end;
@@ -198,6 +200,7 @@ p {
   display: flex;
   gap: 8px;
   align-items: center;
+  padding-bottom: 8px;
 }
 
 .footer-social img {
