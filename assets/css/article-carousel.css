@@ -54,6 +54,6 @@
     transform: perspective(250px) rotateY(0deg) translateX(0px) scaleX(1.5) scaleY(1.2);
 }
 
-.slider_b_element:hover~.slider_b_element {
+.slider_b_element:hover ~ .slider_b_element {
     transform: perspective(250px) rotateY(-20deg) translateX(20px);
 }
