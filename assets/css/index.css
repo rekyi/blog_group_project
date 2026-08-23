@@ -318,15 +318,15 @@ body {
   object-position: 30% 100%;
 }
 
-.slider_a input[value="one"]:checked ~ .slider_a_wrapper {
+.slider_a input[value="one"]:checked~.slider_a_wrapper {
   transform: translateX(calc(100% / 3));
 }
 
-.slider_a input[value="two"]:checked ~ .slider_a_wrapper {
+.slider_a input[value="two"]:checked~.slider_a_wrapper {
   transform: translateX(0);
 }
 
-.slider_a input[value="three"]:checked ~ .slider_a_wrapper {
+.slider_a input[value="three"]:checked~.slider_a_wrapper {
   transform: translateX(calc(-100% / 3));
 }
 
@@ -362,6 +362,7 @@ body {
   display: -webkit-box;
   -webkit-box-orient: vertical;
   -webkit-line-clamp: 3;
+  line-clamp: 3;
   overflow: hidden;
 }
 

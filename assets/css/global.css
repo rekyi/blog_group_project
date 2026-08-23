@@ -1,55 +1,55 @@
 /* #region css reset */
 *, *::before, *::after {
-    box-sizing: border-box;
-    margin: 0;
+  box-sizing: border-box;
+  margin: 0;
 }
 
 html {
-    scroll-behavior: smooth;
+  scroll-behavior: smooth;
 }
 
 @media (prefers-reduced-motion: reduce) {
-    html {
-        scroll-behavior: auto;
-    }
+  html {
+    scroll-behavior: auto;
+  }
 }
 
 body {
-    min-height: 100vh;
-    min-height: 100dvh;
+  min-height: 100vh;
+  min-height: 100dvh;
 }
 
 img, picture, video, canvas, svg {
-    display: block;
-    max-width: 100%;
+  display: block;
+  max-width: 100%;
 }
 
 input, button, textarea, select {
-    font: inherit;
+  font: inherit;
 }
 
 p, h1, h2, h3, h4, h5, h6 {
-    overflow-wrap: break-word;
+  overflow-wrap: break-word;
 }
 
 /* #endregion */
 
 :root {
 
-    /*  header (bg), footer (bg), titles, buttons (bg), icons (mobile-nav), */
-    --color-primary-green: #4EA487;
+  /*  header (bg), footer (bg), titles, buttons (bg), icons (mobile-nav), */
+  --color-primary-green: #4EA487;
 
-    /* hero-bg, mobile-nav (bottom), faq, buttons (text) */
-    --color-primary-yellow: #F1C953;
+  /* hero-bg, mobile-nav (bottom), faq, buttons (text) */
+  --color-primary-yellow: #F1C953;
 
-    /*  author box, pro tipps-box, contact form(?) (20% opacity?) */
-    --color-bg-light-green: #4EA48733;
+  /*  author card, pro tips */
+  --color-bg-light-green: rgba(78, 164, 135, 0.2);
 
-    /* text (only paragraphs?) */
-    --color-text-main: #3D3D3D;
+  /* text (only paragraphs?) */
+  --color-text-main: #3D3D3D;
 
-    /* date, reading time, read, shared, author text */
-    --color-secondary-brown: #54370D;
+  /* date, reading time, read, shared, author text, pro tips */
+  --color-secondary-brown: #54370D;
 }
 
 /* ab hier coden */
@@ -58,12 +58,16 @@ p, h1, h2, h3, h4, h5, h6 {
 } */
 
 h2 {
-    color: var(--color-primary-green);
+  color: var(--color-primary-green);
 }
 
 
 p {
+  color: var(--color-secondary-brown);
+
+  @media (min-width: 768px) {
     color: var(--color-text-main);
+  }
 }
 
 
@@ -118,10 +122,11 @@ p {
   top: 0;
   z-index: 100;
 
-    @media screen and (max-width: 768px) {
-    .desktop-nav{
-    display: none;
+  @media screen and (max-width: 768px) {
+    .desktop-nav {
+      display: none;
     }
+
     .logo-img {
       width: 48px;
       height: 48px;
@@ -229,36 +234,3 @@ p {
 body {
   padding-bottom: 64px;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
