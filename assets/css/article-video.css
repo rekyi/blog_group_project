@@ -1,0 +1,239 @@
+.video-container {
+    padding-block: 2rem;
+    padding-inline: var(--container-padding-inline);
+
+    @media (min-width: 768px) {
+        padding-block: 5.5rem;
+    }
+}
+
+.video {
+    width: 100%;
+    max-width: 75rem;
+    margin: 0 auto 1.5rem;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1.5rem;
+
+    p {
+        font-family: 'Palaquin', sans-serif;
+        font-size: 1rem;
+        color: var(--color-secondary-brown);
+    }
+
+    video {
+        width: 100%;
+        max-width: 60rem;
+        border-radius: 20px;
+
+        cursor: pointer;
+    }
+
+
+}
+
+.text-container {
+
+    padding-inline: var(--container-padding-inline);
+
+    .text-seperate {
+        padding-block: 1.5rem;
+    }
+
+    span {
+        font-family: 'Palanquin', sans-serif;
+        font-weight: 700;
+    }
+}
+
+.text-list {
+    color: var(--color-secondary-brown);
+}
+
+.facts-container {
+    padding-block: 2rem;
+    padding-inline: var(--container-padding-inline);
+
+    @media (min-width: 768px) {
+        padding-block: 5.5rem;
+        padding-inline-start: calc(var(--container-padding-inline) + 3.25rem);
+    }
+
+}
+
+.facts {
+    width: 100%;
+    max-width: 71.5rem;
+    margin: 5rem auto 1rem;
+
+    background-color: var(--color-bg-light-green);
+    border-radius: 30px;
+    padding: 1rem 1.5rem;
+
+    position: relative;
+
+
+}
+
+.facts-badge {
+    font-family: 'Palanquin', sans-serif;
+    font-weight: 700;
+    font-size: 1.75rem;
+
+    color: var(--color-primary-yellow);
+    background-color: var(--color-primary-green);
+    padding: 0.5rem 1.25rem;
+    border-radius: 12px;
+
+    display: flex;
+    gap: 0.5rem;
+    rotate: -12deg;
+
+    position: absolute;
+    top: -4.25rem;
+    left: 0.3rem;
+
+    img {
+        rotate: 12deg;
+    }
+
+    @media (min-width: 768px) {
+        top: -3.25rem;
+        left: -3.25rem;
+    }
+}
+
+.facts-list {
+    font-family: 'Palanquin', sans-serif;
+    font-size: 1rem;
+    color: var(--color-secondary-brown);
+
+    margin: 0;
+    padding-left: 1.25rem;
+
+    a {
+        font-weight: 700;
+        color: var(--color-primary-green);
+        text-decoration: none;
+    }
+
+    @media (min-width: 768px) {
+        font-size: 1.5rem;
+    }
+}
+
+.share-container {
+    padding-inline: var(--container-padding-inline);
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    p {
+        max-width: 500px;
+        margin-bottom: 2rem;
+
+        text-align: center;
+        font-family: 'Arima', sans-serif;
+        font-weight: 500;
+        font-size: clamp(1rem, 0.855rem + 0.8vi, 1.5rem);
+    }
+}
+
+.share {
+    width: 100%;
+    height: 50px;
+
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.share-arrow {
+    position: absolute;
+    right: calc(50% + 125px);
+    bottom: 25px;
+
+    @media (min-width: 768px) {
+        right: calc(50% + 130px);
+        bottom: 10px;
+    }
+}
+
+.share-details {
+    display: flex;
+    align-items: center;
+}
+
+
+.share-btn {
+    width: 160px;
+    height: 50px;
+
+    font-family: 'Arima', sans-serif;
+    font-weight: 700;
+    font-size: 1.5rem;
+    border-radius: 40px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: .625rem;
+
+    background-color: var(--color-primary-green);
+    color: var(--color-primary-yellow);
+
+    cursor: pointer;
+}
+
+
+.share-icon-inside {
+    transition: 0.75s ease;
+}
+
+details[open] {
+
+    .share-btn {
+        width: clamp(6.25rem, 27vi, 7.5rem);
+        gap: 0;
+        pointer-events: none;
+    }
+
+    .share-icon-inside {
+        width: 0;
+        opacity: 0;
+    }
+
+    .share-content {
+        margin-left: 1rem;
+
+        display: flex;
+        align-items: center;
+        gap: 0.75rem;
+    }
+}
+
+.share-links {
+    display: flex;
+    flex-direction: column;
+
+    a {
+        font-family: 'Arima', sans-serif;
+        font-size: 1.125rem;
+        font-weight: 600;
+        color: var(--color-primary-green);
+
+        transition: text-shadow 0.4s ease;
+
+        &:active {
+            text-shadow:
+                0.4px 0 0 var(--color-primary-green);
+        }
+    }
+}

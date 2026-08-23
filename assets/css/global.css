@@ -1,55 +1,59 @@
 /* #region css reset */
 *, *::before, *::after {
-    box-sizing: border-box;
-    margin: 0;
+  box-sizing: border-box;
+  margin: 0;
 }
 
 html {
-    scroll-behavior: smooth;
+  scroll-behavior: smooth;
 }
 
 @media (prefers-reduced-motion: reduce) {
-    html {
-        scroll-behavior: auto;
-    }
+  html {
+    scroll-behavior: auto;
+  }
 }
 
 body {
-    min-height: 100vh;
-    min-height: 100dvh;
+  min-height: 100vh;
+  min-height: 100dvh;
 }
 
 img, picture, video, canvas, svg {
-    display: block;
-    max-width: 100%;
+  display: block;
+  max-width: 100%;
 }
 
 input, button, textarea, select {
-    font: inherit;
+  font: inherit;
 }
 
 p, h1, h2, h3, h4, h5, h6 {
-    overflow-wrap: break-word;
+  overflow-wrap: break-word;
 }
 
 /* #endregion */
 
 :root {
 
-    /*  header (bg), footer (bg), titles, buttons (bg), icons (mobile-nav), */
-    --color-primary-green: #4EA487;
+  /*  header (bg), footer (bg), titles, buttons (bg), icons (mobile-nav), */
+  --color-primary-green: #4EA487;
 
-    /* hero-bg, mobile-nav (bottom), faq, buttons (text) */
-    --color-primary-yellow: #F1C953;
+  /* hero-bg, mobile-nav (bottom), faq, buttons (text) */
+  --color-primary-yellow: #F1C953;
 
-    /*  author box, pro tipps-box, contact form(?) (20% opacity?) */
-    --color-bg-light-green: #4EA48733;
+  /*  author card, pro tips */
+  --color-bg-light-green: rgba(78, 164, 135, 0.2);
 
-    /* text (only paragraphs?) */
-    --color-text-main: #3D3D3D;
+  /* text (only paragraphs?) */
+  --color-text-main: #3D3D3D;
 
-    /* date, reading time, read, shared, author text */
-    --color-secondary-brown: #54370D;
+  /* date, reading time, read, shared, author text, pro tips */
+  --color-secondary-brown: #54370D;
+
+
+  /* responsive spacing left + right */
+  --container-padding-inline: clamp(1rem, 5vi, 4rem);
 }
 
 /* ab hier coden */
@@ -58,53 +62,179 @@ p, h1, h2, h3, h4, h5, h6 {
 } */
 
 h2 {
-    color: var(--color-primary-green);
+  color: var(--color-primary-green);
 }
 
 
 p {
+  color: var(--color-secondary-brown);
+
+  @media (min-width: 768px) {
     color: var(--color-text-main);
+  }
 }
 
 
 
 
-/* HEADER UND FOOTER HIER 
+/* HEADER UND FOOTER HIER */
+/*Header + Desktop-Navbar*/
+/* Navbar oben */
+.nav-bar {
+  display: flex;
+  list-style-type: none;
+
+}
+
+.menu {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  gap: 48px;
+  margin: 0;
+  padding: 0;
+}
+
+.menu-link {
+  display: inline-block;
+  padding: 12px 4px 10px;
+  font-weight: 700;
+  font-size: 20px;
+  letter-spacing: 0.3px;
+  color: #ffffff;
+  text-decoration: none;
+  text-shadow: 2px 2px 0 var(--secondary-brown);
 
 
+}
+
+.menu-link:focus-visible {
+  outline: 2px solid var(--primary-yellow);
+  outline-offset: 3px;
+  border-radius: 3px;
+}
+
+/* Header mit Logo */
+.logo-header {
+  background-color: var(--color-primary-green);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 12px 0;
+  width: 100%;
+  position: relative;
+  top: 0;
+  z-index: 100;
+
+  @media screen and (max-width: 768px) {
+    .desktop-nav {
+      display: none;
+    }
+
+    .logo-img {
+      width: 48px;
+      height: 48px;
+    }
+  }
+}
+
+.logo-header .logo {
+  height: 48px;
+  width: auto;
+}
 
 
+/*Footer*/
 
+.site-footer {
+  background-color: var(--color-primary-green);
+  width: 100%;
+  padding: 20px 16px 64px 16px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+}
 
+.footer-left {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
 
+.footer-left a {
+  color: #FFFFFF;
+  text-decoration: none;
+  font-family: 'Palanquin', sans-serif;
+  font-size: 0.75rem;
+  font-weight: 400;
+}
 
+.footer-left a:hover {
+  text-decoration: underline;
+}
 
+.copyright {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  color: #FFFFFF;
+  font-family: 'Palanquin', sans-serif;
+  font-size: 1rem;
+  font-weight: 400;
+  margin: 0;
+}
 
+.copyright-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 16px;
+  height: 16px;
+  border: 1px solid #FFFFFF;
+  border-radius: 50%;
+  font-size: 0.75rem;
+  line-height: 1;
+}
 
+.footer-social {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  padding-bottom: 8px;
+}
 
+.footer-social img {
+  height: 28px;
+  width: auto;
+}
 
+/* Navbar unten */
+.bottom-navbar {
+  background-color: var(--color-primary-yellow);
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 12px 0;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 64px;
+  z-index: 100;
+}
 
+.bottom-navbar a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 
+.bottom-navbar img {
+  height: 26px;
+  width: auto;
+}
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-*/
+/* Damit Content nicht unter der fixen Navbar verschwindet */
+body {
+  padding-bottom: 64px;
+}
