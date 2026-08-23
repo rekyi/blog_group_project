@@ -50,6 +50,10 @@ p, h1, h2, h3, h4, h5, h6 {
 
   /* date, reading time, read, shared, author text, pro tips */
   --color-secondary-brown: #54370D;
+
+
+  /* responsive spacing left + right */
+  --container-padding-inline: clamp(1rem, 5vi, 4rem);
 }
 
 /* ab hier coden */
