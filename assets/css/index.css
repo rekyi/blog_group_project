@@ -318,15 +318,15 @@ body {
   object-position: 30% 100%;
 }
 
-.slider_a input[value="one"]:checked~.slider_a_wrapper {
+.slider_a input[value="one"]:checked ~ .slider_a_wrapper {
   transform: translateX(calc(100% / 3));
 }
 
-.slider_a input[value="two"]:checked~.slider_a_wrapper {
+.slider_a input[value="two"]:checked ~ .slider_a_wrapper {
   transform: translateX(0);
 }
 
-.slider_a input[value="three"]:checked~.slider_a_wrapper {
+.slider_a input[value="three"]:checked ~ .slider_a_wrapper {
   transform: translateX(calc(-100% / 3));
 }
 
@@ -390,7 +390,7 @@ body {
   gap: 8px;
   font-family: 'Arima', sans-serif;
   color: var(--color-primary-green);
-  font-size: 2,5rem;
+  font-size: 2, 5rem;
   font-weight: 700;
   margin: 12px 0 20px;
 }
@@ -528,9 +528,31 @@ body {
   flex-direction: column;
   align-items: center;
 
+  padding-inline: var(--container-padding-inline);
+
   p {
+    max-width: 60rem;
+    margin-inline: auto;
+    padding-top: 1.5rem;
+
+    /* font size über clamp machen für fix 2 zeilen? */
+    font-size: 1.5rem;
+    font-weight: 500;
+    line-height: 1.1;
+    text-align: center;
+
     display: none;
+
+    @media (min-width: 768px) {
+      display: block;
+    }
   }
+}
+
+.contact-content {
+  width: 100%;
+  max-width: 68.75rem;
+  margin-inline: auto;
 }
 
 .section-title {
@@ -545,9 +567,7 @@ body {
   gap: 1rem;
 }
 
-.contact-form {
-  padding-inline: 1rem;
-}
+
 
 .contact-form input[type="text"],
 .contact-form input[type="email"],
@@ -587,13 +607,19 @@ body {
 }
 
 .contact-form-checkbox {
-  max-width: 375px;
   width: 100%;
-  margin-top: 1.5rem;
+  max-width: 23.5rem;
+  margin: auto;
+  padding-top: 1.5rem;
+
 
   display: flex;
   align-items: start;
   gap: 0.5rem;
+
+  @media (min-width: 768px) {
+    max-width: 37rem;
+  }
 
   input {
     appearance: none;
@@ -628,10 +654,8 @@ body {
 }
 
 .checkbox-text {
-  max-width: 280px;
   color: var(--color-secondary-brown);
   font-family: 'Palanquin', sans-serif;
-  font-weight: 400;
   font-size: 1rem;
   text-align: justify;
 
