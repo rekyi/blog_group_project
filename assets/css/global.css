@@ -82,7 +82,7 @@ p {
   display: flex;
   list-style-type: none;
   gap: 70px;
-  
+
 }
 
 .menu {
@@ -191,6 +191,22 @@ p {
     }
   }
 
+  .logo-img {
+    width: 48px;
+    height: 48px;
+  }
+
+  .logo-header .logo {
+    height: 48px;
+    width: auto;
+  }
+
+  /* Damit Content nicht unter der fixen Navbar verschwindet */
+  body {
+    padding-bottom: 64px;
+  }
+}
+
 .wrapper {
   width: 100%;
   display: flex;
@@ -200,18 +216,23 @@ p {
 
 
 
-
-
-
-
-
-
 /*Footer*/
 
 .site-footer {
   background-color: var(--color-primary-green);
   width: 100%;
-  padding: 20px 16px 0px 16px;
+  padding: var(--container-padding-inline);
+
+  @media (min-width: 768px) {
+    padding-block: 3.75rem;
+  }
+}
+
+.footer-content {
+  max-width: 75rem;
+  margin-inline: auto;
+  width: 100%;
+
   display: flex;
   justify-content: space-between;
   align-items: flex-end;
@@ -227,8 +248,7 @@ p {
   color: #FFFFFF;
   text-decoration: none;
   font-family: 'Palanquin', sans-serif;
-  font-size: 0.75rem;
-  font-weight: 400;
+  font-size: 1rem;
 }
 
 .footer-left a:hover {
@@ -244,6 +264,7 @@ p {
   font-size: 1rem;
   font-weight: 400;
   margin: 0;
+
 }
 
 .copyright-icon {
@@ -252,15 +273,16 @@ p {
   justify-content: center;
   width: 16px;
   height: 16px;
-
-
 }
 
 .footer-social {
   display: flex;
-  gap: 8px;
+  gap: 0.5rem;
   align-items: center;
-  padding-bottom: 8px;
+
+  @media (min-width: 375px) {
+    gap: 1rem;
+  }
 }
 
 .footer-social img {
@@ -269,6 +291,7 @@ p {
 }
 
 /* Navbar unten */
+
 .bottom-navbar {
   background-color: var(--color-primary-yellow);
   display: flex;
