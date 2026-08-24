@@ -12,7 +12,7 @@
   list-style: none;
   display: flex;
   align-items: center;
-  gap: 48px;
+  gap: 72px;
   margin: 0;
   padding: 0;
 }
@@ -20,8 +20,9 @@
 .menu-link {
   display: inline-block;
   padding: 12px 4px 10px;
+  font-family: 'Arima', sans-serif;
   font-weight: 700;
-  font-size: 20px;
+  font-size: 1.5rem;
   letter-spacing: 0.3px;
   color: #ffffff;
   text-decoration: none;
@@ -36,65 +37,13 @@
   border-radius: 3px;
 }
 
-/* Header mit Logo */
-.logo-header {
-  background-color: var(--color-primary-green);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 12px 0;
-  position: sticky;
-  top: 0;
-  z-index: 100;
-
-  @media screen and (max-width: 768px) {
-    .desktop-nav {
-      display: none;
-    }
-
-    .logo-img {
-      width: 48px;
-      height: 48px;
-    }
-  }
-}
-
-.logo-header .logo {
-  height: 48px;
-  width: auto;
-}
 
 
 
-/* Navbar unten */
-.bottom-navbar {
-  background-color: var(--color-primary-yellow);
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  padding: 12px 0;
-  position: fixed;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  z-index: 100;
-}
 
-.bottom-navbar a {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
 
-.bottom-navbar img {
-  height: 26px;
-  width: auto;
-}
 
-/* Damit Content nicht unter der fixen Navbar verschwindet */
-body {
-  padding-bottom: 64px;
-}
+
 
 
 
