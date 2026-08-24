@@ -149,6 +149,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    padding-bottom: 5rem;
 
     p {
         max-width: 31.25rem;
@@ -161,10 +162,10 @@
 }
 
 .share {
-    width: 100%;
-    height: 50px;
-
     position: relative;
+    width: 100%;
+    height: 3.125rem;
+
     display: flex;
     justify-content: center;
     align-items: center;
@@ -189,25 +190,24 @@
 
 
 .share-btn {
-    width: 160px;
-    height: 50px;
+    width: 10rem;
+    height: 3.125rem;
 
     font-family: 'Arima', sans-serif;
     font-weight: 700;
     font-size: 1.5rem;
-    border-radius: 40px;
+
+    border-radius: 2.5rem;
 
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: .625rem;
+    gap: 0.625rem;
 
     background-color: var(--color-primary-green);
     color: var(--color-primary-yellow);
-
     cursor: pointer;
 }
-
 
 .share-icon-inside {
     transition: 0.75s ease;
