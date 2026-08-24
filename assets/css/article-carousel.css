@@ -42,7 +42,7 @@
     align-items: center;
     padding: 3rem;
 
-    @media (max-width: 1000px) {
+    @media (max-width: 768px) {
         display: none;
     }
 }
@@ -57,7 +57,7 @@ h3 {
     text-align: center;
     padding: clamp(1rem, 5vw, 3rem);
 
-    @media (max-width: 1000px) {
+    @media (max-width: 768px) {
         font-size: 1.25rem;
     }
 }
@@ -123,20 +123,6 @@ h3 {
     transform: perspective(15.5rem) rotateY(-20deg) translateX(1.25rem);
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 .top-five-mobile {
     display: flex;
     justify-content: center;
@@ -144,10 +130,9 @@ h3 {
     align-items: center;
     padding: 3rem 0rem;
 
-    @media (min-width: 1001px) {
+    @media (min-width: 769px) {
         display: none;
     }
-
 }
 
 
@@ -256,7 +241,6 @@ h3 {
     transform: translateX(calc(-100% / 5 * 4));
 }
 
-
 .slider_mobile input[value="one"]:checked~.slider_mobile_wrapper .element_two {
     transform: perspective(15.5rem) rotateY(-20deg) translateX(0.3rem) scale(0.9);
 }
@@ -288,7 +272,6 @@ h3 {
 .slider_mobile input[value="five"]:checked~.slider_mobile_wrapper .element_four {
     transform: perspective(15.5rem) rotateY(20deg) translateX(-0.3rem) scale(0.9);
 }
-
 
 .facts-container {
     padding-block: 2rem;
@@ -403,7 +386,6 @@ h3 {
     align-items: center;
 
 }
-
 
 .share-arrow {
     position: absolute;
