@@ -117,78 +117,25 @@ p {
 
 
 
-
-
-
-
-
 @media (max-width: 767px) {
-    .desktop-nav {
-      display: none;
-    }
-    /* Header mit Logo */
-    .logo-header {
-      background-color: var(--color-primary-green);
-      width: 100%;
-      display: flex;
-      justify-content: center;
-      align-items: center;
- 
-
-      padding: 8px 102px 8px 146px;
-      position: sticky;
-      top: 0;
-      z-index: 100;
-
-    }
-
-    .logo-img {
-      width: 48px;
-      height: 48px;
-    }
-
-    .logo-header .logo {
-    height: 48px;
-    width: auto;
-    }
-  /* Damit Content nicht unter der fixen Navbar verschwindet */
-    body {
-    padding-bottom: 64px;
-    }
+  .desktop-nav {
+    display: none;
   }
 
-    @media (min-width: 768px){
-    #bottom-navbar {
-      display: none;
-    }
-    .logo-header {
-      background-color: var(--color-primary-green);
-      width: 100%;
-      display: flex;
-      justify-content: center;
-      align-items: center;
- 
+  /* Header mit Logo */
+  .logo-header {
+    background-color: var(--color-primary-green);
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 
-      padding: 32px 102px 32px 146px;
-      position: sticky;
-      top: 0;
-      z-index: 100;
 
-    }
+    padding-top: 8px 102px 8px 146px;
+    position: sticky;
+    top: 0;
+    z-index: 100;
 
-    .logo-img {
-      width: 72px;
-      height: 72px;
-    }
-    .logo-header .logo {
-    height: 72px;
-    width: auto;
-    
-    margin-right: 102px;
-    }
-    body {
-    padding-bottom: 0px;
-    }
   }
 
   .logo-img {
@@ -267,6 +214,133 @@ body {
   background: #ffffff;
 }
 
+.card {
+  width: 100%;
+  padding: 24px 15px 0px 15px;
+}
+
+.kicker {
+  margin: 0 0 6px 0;
+  color: var(--color-primary-green);
+  font-family: 'Palanquin', sans-serif;
+  font-size: 1.25rem;
+  font-weight: 600;
+}
+
+.title {
+  margin: 0 0 14px 0;
+
+  line-height: 1.15;
+
+  color: var(--color-primary-yellow);
+  font-family: 'Arima', sans-serif;
+  font-size: 2.5rem;
+  font-weight: 700;
+}
+
+.meta {
+  margin: 24px 0px;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+
+}
+
+.meta-row {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+
+  @media (min-width: 375px) {
+    flex-direction: row;
+
+  }
+
+}
+
+.meta-item {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  color: var(--color-secondary-brown);
+  font-family: 'Palanquin', sans-serif;
+  font-size: 1rem;
+  font-weight: 400;
+  white-space: nowrap;
+}
+
+.icon {
+  width: 16px;
+  height: 16px;
+  object-fit: contain;
+  flex-shrink: 0;
+}
+
+.icon-wide {
+  width: 20px;
+  height: auto;
+}
+
+.author-card {
+  width: 100%;
+  padding: 0 15px 15px 15px;
+  display: flex;
+  justify-content: center;
+}
+
+.author-bg {
+  width: clamp(290px, calc(100vw - 30px), 345px);
+  background-color: var(--color-bg-light-green);
+  border-radius: 30px;
+
+  padding: 1rem 0.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.author-avatar {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  overflow: hidden;
+  margin-bottom: 12px;
+  background: #cfe6e0;
+}
+
+.author-avatar img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.author-name {
+  margin: 0;
+  color: var(--color-secondary-brown);
+  font-family: 'Arima', sans-serif;
+  font-size: 1rem;
+  font-weight: 700;
+}
+
+.author-role {
+  margin: 2px 0 12px 0;
+  color: var(--color-secondary-brown);
+  font-family: 'Arima', sans-serif;
+  font-size: 1rem;
+  font-weight: 400;
+}
+
+.author-bio {
+  margin: 0;
+  max-width: 45ch;
+  color: var(--color-secondary-brown);
+  font-family: 'Palanquin', sans-serif;
+  font-size: 1rem;
+  font-weight: 400;
+}
 
 
 /*Footer*/
