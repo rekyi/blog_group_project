@@ -1,9 +1,5 @@
 .video-container {
     padding-inline: var(--container-padding-inline);
-
-    @media (min-width: 768px) {
-        padding-block: 5.5rem;
-    }
 }
 
 .video {
@@ -14,18 +10,18 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    gap: 1.5rem;
-
-    p {
-        width: 100%;
-    }
 
     video {
         width: 100%;
         max-width: 60rem;
+        margin-block: 1.5rem;
         border-radius: 20px;
 
         cursor: pointer;
+
+        @media (min-width: 768px) {
+            margin-block: 5rem;
+        }
     }
 }
 
