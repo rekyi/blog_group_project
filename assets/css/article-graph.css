@@ -1,7 +1,7 @@
 body {
   margin: 0;
   padding: 0;
-  background: #f2f2f2;
+  background: #ffffff;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -10,6 +10,8 @@ body {
 
 .wrapper {
   width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
   display: flex;
   flex-direction: column;
   background: #ffffff;
@@ -91,7 +93,8 @@ body {
 }
 
 .author-bg {
-  width: clamp(290px, calc(100vw - 30px), 345px);
+  width: 100%;
+  max-width: 345px;
   background: #E7F2EF;
   border-radius: 30px;
   padding: 20px 16px;
@@ -149,7 +152,7 @@ body {
 }
 
 .section-heading {
-  margin: 24px 0 10px 0;
+  margin: 24px 0px 10px 0px;
   color: var(--color-primary-brown);
   font-family: 'Arima', sans-serif;
   font-size: 1.5rem;
@@ -158,7 +161,7 @@ body {
 }
 
 .lorem {
-  margin: 0 0 14px 0;
+  margin-bottom: 14px;
   line-height: 1.6;
   color: var(--color-primary-brown);
   font-family: 'Palanquin', sans-serif;
@@ -168,7 +171,7 @@ body {
 
 .graph-wrap {
   width: 100%;
-  margin: 4px 0 14px 0;
+  margin: 4px 0px 14px 0px;
 }
 
 .graph-img {
@@ -176,5 +179,70 @@ body {
   width: 100%;
   height: auto;
   border-radius: 16px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+
+}
+
+@media (min-width: 768px) {
+
+  .top-row {
+    display: flex;
+    align-items: flex-start;
+    gap: 24px;
+    padding: 24px 15px 0 15px;
+  }
+
+  .top-row .card {
+    flex: 1 1 auto;
+    padding: 0;
+    min-width: 0;
+  }
+
+  .top-row .author-card {
+    flex: 0 0 220px;
+    width: 220px;
+    padding: 0;
+    display: block;
+  }
+
+  .author-bg {
+    width: 100%;
+    max-width: none;
+    padding: 16px 14px;
+  }
+
+  .author-avatar {
+    width: 64px;
+    height: 64px;
+    margin-bottom: 8px;
+  }
+
+  .author-name {
+    font-size: 0.8rem;
+  }
+
+  .author-role {
+    font-size: 0.75rem;
+    margin: 2px 0 8px 0;
+  }
+
+  .author-bio {
+    font-size: 0.7rem;
+    max-width: none;
+  }
+
+  .content-columns {
+    display: flex;
+    gap: 24px;
+  }
+
+  .content-columns .content {
+    flex: 1 1 0;
+  }
+
+  .graph-wrap {
+    max-width: 345px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
 }
