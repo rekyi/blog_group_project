@@ -120,13 +120,10 @@ p {
   text-shadow: 2px 2px 0 var(--secondary-brown);
 
 
+
 }
 
-.menu-link:focus-visible {
-  outline: 2px solid var(--primary-yellow);
-  outline-offset: 3px;
-  border-radius: 3px;
-}
+
 
 /* Header mit Logo */
 .logo-header {
@@ -162,7 +159,7 @@ p {
     display: flex;
     justify-content: center;
     align-items: center;
-
+    width: 100%;
   }
 
   .logo-img {
@@ -174,7 +171,7 @@ p {
     height: 72px;
     width: auto;
 
-    margin-right: clamp(1.5rem, 5vw, 102px);
+    margin-right: 0;
   }
 
   body {
