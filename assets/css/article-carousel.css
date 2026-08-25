@@ -1,8 +1,9 @@
 .text-container {
     padding-inline: var(--container-padding-inline);
+    margin-bottom: 1rem;
 
     .text-seperate {
-        padding-block: 1.5rem;
+        padding-block: 2rem;
     }
 
     span {
@@ -43,7 +44,7 @@
 } */
 
 .top-five-desktop {
-    padding-inline: var(--container-padding-inline);
+    padding-inline: var(---padding-inline);
 
 
     @media (max-width: 768px) {
@@ -60,14 +61,11 @@
 h3 {
     font-family: 'Arima', sans-serif;
     font-weight: 600;
-    font-size: 2rem;
+    font-size: clamp(1.25rem, 1.036rem + 1.071vi, 2rem);
     color: var(--color-secondary-brown);
     text-align: center;
-    padding: clamp(1rem, 5vw, 3rem);
-
-    @media (max-width: 768px) {
-        font-size: 1.25rem;
-    }
+    padding-bottom: 1.5rem;
+    padding-inline: 1rem;
 }
 
 .carousel-wrapper-desktop {
@@ -141,7 +139,7 @@ h3 {
     justify-content: center;
     flex-direction: column;
     align-items: center;
-    padding: 3rem 0rem;
+    padding-bottom: 2.5rem;
 
     @media (min-width: 769px) {
         display: none;
@@ -200,6 +198,7 @@ h3 {
 .slider_mobile_element {
     width: calc(100% / 5);
     height: 100%;
+    padding-bottom: 2rem;
     position: relative;
     box-sizing: border-box;
     transform-origin: center center;
@@ -287,7 +286,7 @@ h3 {
 }
 
 .facts-container {
-    padding-block: 2rem;
+    padding-block: 2rem 2.5rem;
     padding-inline: var(--container-padding-inline);
 
     display: flex;
@@ -338,7 +337,7 @@ h3 {
     rotate: -12deg;
 
     position: absolute;
-    top: -4.25rem;
+    top: -3.75rem;
     left: 0.3rem;
 
     img {
