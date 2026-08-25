@@ -21,11 +21,6 @@
     font-family: 'Palanquin', sans-serif;
     font-size: clamp(1rem, 0.855rem + 0.8vi, 1.5rem);
 
-    /* für punkte der ul */
-    li::marker {
-        font-size: 0.6em;
-    }
-
     @media (min-width: 768px) {
         color: var(--color-text-main);
     }
