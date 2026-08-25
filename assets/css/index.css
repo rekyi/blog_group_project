@@ -1,110 +1,6 @@
 /* SELIM HEADER + NAVBAR UND FOOTER + NAVBAR KOMMT IN global.css   
 */
 
-/* Navbar oben */
-.nav-bar {
-  display: flex;
-  list-style-type: none;
-
-}
-
-.menu {
-  list-style: none;
-  display: flex;
-  align-items: center;
-  gap: 72px;
-  margin: 0;
-  padding: 0;
-}
-
-.menu-link {
-  display: inline-block;
-  padding: 12px 4px 10px;
-  font-family: 'Arima', sans-serif;
-  font-weight: 700;
-  font-size: 1.5rem;
-  letter-spacing: 0.3px;
-  color: #ffffff;
-  text-decoration: none;
-  text-shadow: 2px 2px 0 var(--secondary-brown);
-
-
-}
-
-.menu-link:focus-visible {
-  outline: 2px solid var(--primary-yellow);
-  outline-offset: 3px;
-  border-radius: 3px;
-}
-
-
-
-
-
-
-
-
-
-
-
-/* Footer direkt über der Navbar */
-.site-footer {
-  background-color: var(--color-primary-green);
-  padding: 20px 16px;
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-end;
-}
-
-.footer-left {
-  display: flex;
-  flex-direction: column;
-  gap: 8px;
-}
-
-.footer-left a {
-  color: #FFFFFF;
-  text-decoration: none;
-  font-size: 14px;
-}
-
-.footer-links a:hover {
-  text-decoration: underline;
-}
-
-.copyright {
-  display: flex;
-  align-items: center;
-  gap: 6px;
-  color: #FFFFFF;
-  font-size: 14px;
-  margin: 0;
-}
-
-.copyright-icon {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  width: 16px;
-  height: 16px;
-  border: 1px solid #FFFFFF;
-  border-radius: 50%;
-  font-size: 11px;
-  line-height: 1;
-}
-
-.footer-social {
-  display: flex;
-  gap: 8px;
-  align-items: center;
-}
-
-.footer-social img {
-  height: 28px;
-  width: auto;
-}
-
-
 /* ALICA HERO UND HIGHLIGHTS CSS 
 */
 /* 
@@ -433,7 +329,7 @@
   gap: 8px;
   font-family: 'Arima', sans-serif;
   color: var(--color-primary-green);
-  font-size: 2, 5rem;
+  font-size: 2.5rem;
   font-weight: 700;
   margin: 12px 0 20px;
 }
@@ -519,58 +415,9 @@
 }
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+/* Benjamin's Bereich */
 .contact {
   color: var(--color-secondary-brown);
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-
   padding-inline: var(--container-padding-inline);
 
   p {
@@ -578,7 +425,8 @@
     margin-inline: auto;
     padding-top: 1.5rem;
 
-    /* font size über clamp machen für fix 2 zeilen? */
+    /* font size über clamp machen für fix 2 zeilen?
+       oder generell font-size niedriger? */
     font-size: 1.5rem;
     font-weight: 500;
     line-height: 1.1;
@@ -602,12 +450,11 @@
   font-family: 'Arima', sans-serif;
   font-weight: 700;
   font-size: 2.5rem;
-  line-height: 1;
 
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 1rem;
+  gap: 0.5rem;
 }
 
 
@@ -641,11 +488,20 @@
   outline: 1px solid white;
 }
 
-.contact-form textarea {
-  resize: none;
-  min-height: 8rem;
+.contact-form-row {
+  display: flex;
+  flex-direction: column;
 
+  @media (min-width: 768px) {
+    flex-direction: row;
+    gap: 3rem;
+  }
+}
+
+.contact-form textarea {
   max-height: 10rem;
+  resize: none;
+  field-sizing: content;
   scrollbar-width: none;
 }
 
@@ -706,7 +562,7 @@
     pointer-events: none;
   }
 
-  span {
+  a {
     text-decoration: none;
     color: var(--color-primary-green);
     font-weight: 500;
@@ -722,18 +578,17 @@
 }
 
 .contact-form-group {
+  min-height: 8rem;
+  padding-top: 3.5rem;
+
   font-family: 'Palanquin', sans-serif;
   font-weight: 500;
   font-size: 1.5rem;
-  padding-top: 2rem;
 
   display: flex;
   flex-direction: column;
   align-items: start;
-
-  width: 100%;
-  max-width: 375px;
-  margin: 0 auto;
+  flex: 1;
 }
 
 .btn-submit {
