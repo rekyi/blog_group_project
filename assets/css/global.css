@@ -51,22 +51,20 @@ h6 {
 /* #endregion */
 
 :root {
-
   /*  header (bg), footer (bg), titles, buttons (bg), icons (mobile-nav), */
-  --color-primary-green: #4EA487;
+  --color-primary-green: #4ea487;
 
   /* hero-bg, mobile-nav (bottom), faq, buttons (text) */
-  --color-primary-yellow: #F1C953;
+  --color-primary-yellow: #f1c953;
 
   /*  author card, pro tips */
   --color-bg-light-green: rgba(78, 164, 135, 0.2);
 
   /* text (only paragraphs?) */
-  --color-text-main: #3D3D3D;
+  --color-text-main: #3d3d3d;
 
   /* date, reading time, read, shared, author text, pro tips */
-  --color-secondary-brown: #54370D;
-
+  --color-secondary-brown: #54370d;
 
   /* responsive spacing left + right */
   --container-padding-inline: clamp(1rem, 5vi, 4rem);
@@ -76,10 +74,9 @@ h2 {
   color: var(--color-primary-green);
 }
 
-
 p {
   color: var(--color-secondary-brown);
-  font-family: 'Palanquin', sans-serif;
+  font-family: "Palanquin", sans-serif;
   font-size: clamp(1rem, 0.855rem + 0.8vi, 1.5rem);
 
   @media (min-width: 768px) {
@@ -90,7 +87,6 @@ p {
 /* HEADER UND FOOTER HIER */
 /*Header + Desktop-Navbar*/
 /* Navbar oben */
-
 
 .nav-bar {
   display: flex;
@@ -108,18 +104,54 @@ p {
   padding: 0;
 }
 
+.menu-item {
+  position: relative;
+}
+
+.menu-item img {
+  display: none;
+  position: absolute;
+  left: 0rem;
+  top: 0rem;
+}
+
+.menu-item:nth-child(1) img {
+  left: 0.2rem;
+  top: 1.9rem;
+}
+
+.menu-item:nth-child(2) img {
+  left: 0rem;
+  top: 2.4rem;
+}
+
+.menu-item:nth-child(3) img {
+  left: 0rem;
+  top: 2.3rem;
+}
+
+.menu-item:hover img {
+  display: revert;
+}
+
+.menu-item a:active {
+  color: var(--color-primary-yellow);
+}
+
+.menu-item:has(a:active) img {
+  display: none;
+}
+
 .menu-link {
   display: inline-block;
   padding: 12px 4px 10px;
-  font-family: 'Arima', sans-serif;
+  font-family: "Arima", sans-serif;
   font-weight: 700;
   font-size: 1.5rem;
   letter-spacing: 0.3px;
   color: rgba(248, 245, 235);
   text-decoration: none;
   text-shadow: 2px 2px 0 var(--secondary-brown);
-
-
 }
 
 .menu-link:focus-visible {
@@ -142,7 +174,6 @@ p {
   z-index: 100;
 }
 
-
 @media (max-width: 767px) {
   .desktop-nav {
     display: none;
@@ -162,7 +193,6 @@ p {
     display: flex;
     justify-content: center;
     align-items: center;
-
   }
 
   .logo-img {
@@ -193,7 +223,7 @@ p {
 
 .kicker {
   margin: 0 0 6px 0;
-  font-family: 'Palanquin', sans-serif;
+  font-family: "Palanquin", sans-serif;
   font-size: clamp(1.25rem, 0.893rem + 1.786vi, 2.5rem);
   font-weight: 600;
   color: var(--color-primary-green);
@@ -202,10 +232,9 @@ p {
 .title {
   margin: 0 0 14px 0;
   color: var(--color-primary-yellow);
-  font-family: 'Arima', sans-serif;
+  font-family: "Arima", sans-serif;
   font-size: clamp(2.5rem, 2.071rem + 2.143vi, 4rem);
   font-weight: 700;
-
 }
 
 .meta {
@@ -234,13 +263,12 @@ p {
   }
 }
 
-
 .meta-item {
   display: flex;
   align-items: center;
   gap: 6px;
   color: var(--color-secondary-brown);
-  font-family: 'Palanquin', sans-serif;
+  font-family: "Palanquin", sans-serif;
   font-size: 1rem;
   font-weight: 400;
   white-space: nowrap;
@@ -296,7 +324,7 @@ p {
 .author-name {
   margin: 0;
   color: var(--color-secondary-brown);
-  font-family: 'Arima', sans-serif;
+  font-family: "Arima", sans-serif;
   font-size: 1rem;
   font-weight: 700;
 }
@@ -304,18 +332,16 @@ p {
 .author-role {
   margin: 2px 0 12px 0;
   color: var(--color-secondary-brown);
-  font-family: 'Arima', sans-serif;
+  font-family: "Arima", sans-serif;
   font-size: 1rem;
-
 }
 
 .author-bio {
   margin: 0;
   max-width: 45ch;
   color: var(--color-secondary-brown);
-  font-family: 'Palanquin', sans-serif;
+  font-family: "Palanquin", sans-serif;
   font-size: 1rem;
-
 }
 
 /*Footer*/
@@ -347,9 +373,9 @@ p {
 }
 
 .footer-left a {
-  color: #FFFFFF;
+  color: #ffffff;
   text-decoration: none;
-  font-family: 'Palanquin', sans-serif;
+  font-family: "Palanquin", sans-serif;
   font-size: 1rem;
 }
 
@@ -361,12 +387,11 @@ p {
   display: flex;
   align-items: center;
   gap: 6px;
-  color: #FFFFFF;
-  font-family: 'Palanquin', sans-serif;
+  color: #ffffff;
+  font-family: "Palanquin", sans-serif;
   font-size: 1rem;
   font-weight: 400;
   margin: 0;
-
 }
 
 .copyright-icon {
@@ -418,8 +443,6 @@ p {
   height: 26px;
   width: auto;
 }
-
-
 
 @media (min-width: 768px) {
   .bottom-navbar {
@@ -507,7 +530,6 @@ p {
   .author-bg {
     max-width: 17rem;
     text-align: start;
-
   }
 
   .author-name {
@@ -554,7 +576,7 @@ p {
     margin-bottom: 2rem;
 
     text-align: center;
-    font-family: 'Arima', sans-serif;
+    font-family: "Arima", sans-serif;
     font-weight: 500;
   }
 }
@@ -568,7 +590,6 @@ p {
   justify-content: center;
   align-items: center;
 }
-
 
 .share-arrow {
   position: absolute;
@@ -586,12 +607,11 @@ p {
   align-items: center;
 }
 
-
 .share-btn {
   width: 10rem;
   height: 3.125rem;
 
-  font-family: 'Arima', sans-serif;
+  font-family: "Arima", sans-serif;
   font-weight: 700;
   font-size: 1.5rem;
 
@@ -612,7 +632,6 @@ p {
 }
 
 details[open] {
-
   .share-btn {
     width: clamp(6.25rem, 27vi, 7.5rem);
     gap: 0;
@@ -638,7 +657,7 @@ details[open] {
   flex-direction: column;
 
   a {
-    font-family: 'Arima', sans-serif;
+    font-family: "Arima", sans-serif;
     font-size: 1.125rem;
     font-weight: 600;
     color: var(--color-primary-green);
@@ -646,8 +665,7 @@ details[open] {
     transition: text-shadow 0.4s ease;
 
     &:active {
-      text-shadow:
-        0.4px 0 0 var(--color-primary-green);
+      text-shadow: 0.4px 0 0 var(--color-primary-green);
     }
   }
 }
