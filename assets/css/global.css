@@ -1,5 +1,7 @@
 /* #region css reset */
-*, *::before, *::after {
+*,
+*::before,
+*::after {
   box-sizing: border-box;
   margin: 0;
 }
@@ -20,16 +22,29 @@ body {
   line-height: 1.5;
 }
 
-img, picture, video, canvas, svg {
+img,
+picture,
+video,
+canvas,
+svg {
   display: block;
   max-width: 100%;
 }
 
-input, button, textarea, select {
+input,
+button,
+textarea,
+select {
   font: inherit;
 }
 
-p, h1, h2, h3, h4, h5, h6 {
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   overflow-wrap: break-word;
 }
 
@@ -117,57 +132,59 @@ p {
   display: flex;
   justify-content: start;
   align-items: center;
- 
+
   padding-left: 146px;
   padding-right: 102px;
   position: sticky;
   top: 0;
   z-index: 100;
 
-  
+
 
 
 }
 
 @media (max-width: 767px) {
-    .desktop-nav {
-      display: none;
-    }
-
-    .bottom-navbar{
-      display: none;
-    }
-
-    .logo-img {
-      width: 48px;
-      height: 48px;
-    }
-
-    .logo-header .logo {
-    height: 48px;
-    width: auto;
-    }
+  .desktop-nav {
+    display: none;
   }
 
-    @media (min-width: 768px){
-    .bottom-navbar {
-      display: none;
-    }
-    .desktop-nav {
-      display: none;
-    }
+  .bottom-navbar {
+    display: none;
+  }
 
-    .logo-img {
-      width: 72px;
-      height: 72px;
-    }
-    .logo-header .logo {
+  .logo-img {
+    width: 48px;
+    height: 48px;
+  }
+
+  .logo-header .logo {
+    height: 48px;
+    width: auto;
+  }
+}
+
+@media (min-width: 768px) {
+  .bottom-navbar {
+    display: none;
+  }
+
+  .desktop-nav {
+    display: none;
+  }
+
+  .logo-img {
+    width: 72px;
+    height: 72px;
+  }
+
+  .logo-header .logo {
     height: 72px;
     width: auto;
     margin-left: 146px;
     margin-right: 102px;
-    }
   }
+}
 
 
 
