@@ -1,3 +1,16 @@
+.section-title {
+  font-family: 'Arima', sans-serif;
+  font-weight: 700;
+  font-size: clamp(2.5rem, 2.286rem + 1.071vi, 3.25rem);
+
+  padding-block: 5rem 2rem;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+}
+
 /* SELIM HEADER + NAVBAR UND FOOTER + NAVBAR KOMMT IN global.css   
 */
 
@@ -64,8 +77,6 @@
   background-color: var(--color-primary-yellow);
   width: 100vw;
   height: 32rem;
-
-
 }
 
 .hero-bg-picture {
@@ -158,14 +169,13 @@
 
 
 .highlights {
-  padding: 80px 16px;
+  padding-inline: var(--container-padding-inline);
 }
 
-.highlights-headline {
-  display: flex;
-  justify-content: center;
-  gap: 8px;
-  align-items: center;
+.hightlights-container {
+  width: 100%;
+  max-width: 75rem;
+  margin-inline: auto;
 }
 
 .highlights-headline h2 {
@@ -195,12 +205,11 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 16px;
 }
 
 .slider_a {
   position: relative;
-  width: 350px;
+  width: 100%;
   height: 550px;
   border-radius: 0px 100px 0px 0px;
   display: flex;
@@ -320,8 +329,13 @@
 /* SELIM FAQ CSS */
 
 .faq-section {
-  border-top: 3px solid var(--color-primary-green);
-  padding: 20px 16px 32px;
+  padding-inline: var(--container-padding-inline)
+}
+
+.faq-container {
+  width: 100%;
+  max-width: 75rem;
+  margin-inline: auto;
 }
 
 .faq-title {
@@ -334,11 +348,6 @@
   font-size: 2.5rem;
   font-weight: 700;
   margin: 12px 0 20px;
-}
-
-.faq-title-icon {
-  width: 26px;
-  height: auto;
 }
 
 .faq-list {
@@ -368,8 +377,9 @@
   gap: 12px;
   padding: 14px 16px;
   font-family: 'Palanquin', sans-serif;
-  font-size: 1rem;
+  font-size: clamp(1rem, 0.857rem + 0.714vi, 1.5rem);
   font-weight: 700;
+  line-height: 1.1;
   color: var(--color-secondary-brown);
 }
 
@@ -425,10 +435,6 @@
   p {
     max-width: 60rem;
     margin-inline: auto;
-    padding-top: 1.5rem;
-
-    /* font size über clamp machen für fix 2 zeilen?
-       oder generell font-size niedriger? */
     font-size: 1.5rem;
     font-weight: 500;
     line-height: 1.1;
@@ -447,19 +453,6 @@
   max-width: 68.75rem;
   margin-inline: auto;
 }
-
-.section-title {
-  font-family: 'Arima', sans-serif;
-  font-weight: 700;
-  font-size: 2.5rem;
-
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 0.5rem;
-}
-
-
 
 .contact-form input[type="text"],
 .contact-form input[type="email"],
