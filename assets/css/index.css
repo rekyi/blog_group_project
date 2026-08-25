@@ -3,7 +3,7 @@
 
 /* ALICA HERO UND HIGHLIGHTS CSS 
 */
-
+/* 
 .hero {
   overflow: hidden;
 }
@@ -47,8 +47,102 @@
   to {
     transform: rotate(0deg);
   }
+} */
+
+.hero2 {
+  position: relative;
+  width: 90rem;
+  height: 32rem;
+  overflow: hidden;
 }
 
+.hero-bg-yellow {
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  z-index: 1;
+  background-color: var(--color-primary-yellow);
+  width: 100vw;
+  height: 32rem;
+}
+
+.hero-bg-picture {
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  z-index: 2;
+  height: 32rem;
+}
+
+.hero-bg-picture img {
+  width: 100vw;
+  height: 32rem;
+  display: block;
+  object-fit: cover;
+  object-position: 40% 100%;
+}
+
+.hero-bg-picture img {
+  object-fit: cover;
+}
+
+.hero-element-yellow {
+  width: 110rem;
+  height: 32rem;
+  position: absolute;
+  left: -70rem;
+  top: 0px;
+  z-index: 3;
+}
+
+.hero-text {
+  position: absolute;
+  left: 3rem;
+  top: 5rem;
+  z-index: 4;
+  width: 30%;
+}
+
+.hero-text h3 {
+  font-family: 'Arima', sans-serif;
+  font-weight: 700;
+  font-size: 3.75rem;
+  color: var(--color-secondary-brown);
+}
+
+.hero-text p {
+  font-family: 'Palanquin', sans-serif;
+  font-weight: 500;
+  font-size: 1.75rem;
+  color: var(--color-secondary-brown);
+}
+
+.turkey-badge {
+  position: absolute;
+  left: 27rem;
+  top: 17rem;
+  z-index: 5;
+  animation: rotate 20s linear infinite;
+}
+
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.turkey-flag {
+  position: absolute;
+  left: 27rem;
+  top: 17rem;
+  z-index: 6;
+  border-color: red;
+  border-width: 1rem;
+}
 
 
 
@@ -163,15 +257,15 @@
   object-position: 30% 100%;
 }
 
-.slider_a input[value="one"]:checked ~ .slider_a_wrapper {
+.slider_a input[value="one"]:checked~.slider_a_wrapper {
   transform: translateX(calc(100% / 3));
 }
 
-.slider_a input[value="two"]:checked ~ .slider_a_wrapper {
+.slider_a input[value="two"]:checked~.slider_a_wrapper {
   transform: translateX(0);
 }
 
-.slider_a input[value="three"]:checked ~ .slider_a_wrapper {
+.slider_a input[value="three"]:checked~.slider_a_wrapper {
   transform: translateX(calc(-100% / 3));
 }
 
