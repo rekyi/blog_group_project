@@ -12,25 +12,6 @@
   padding: 24px 15px 0px 15px;
 }
 
-.kicker {
-  margin: 0 0 6px 0;
-  color: var(--color-primary-green);
-  font-family: 'Palanquin', sans-serif;
-  font-size: 1.25rem;
-  font-weight: 600;
-}
-
-.title {
-  margin: 0 0 14px 0;
-
-  line-height: 1.15;
-
-  color: var(--color-primary-yellow);
-  font-family: 'Arima', sans-serif;
-  font-size: 2.5rem;
-  font-weight: 700;
-}
-
 .description {
 
   line-height: 1.5;
@@ -75,66 +56,9 @@
   height: auto;
 }
 
-.author-card {
-  width: 100%;
-  padding: 0 15px 15px 15px;
-  display: flex;
-  justify-content: center;
-}
 
-.author-bg {
-  width: 100%;
-  max-width: 345px;
-  background: #E7F2EF;
-  border-radius: 30px;
-  padding: 20px 16px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
-}
 
-.author-avatar {
-  width: 120px;
-  height: 120px;
-  border-radius: 50%;
-  overflow: hidden;
-  margin-bottom: 12px;
-  background: #cfe6e0;
-}
 
-.author-avatar img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  display: block;
-}
-
-.author-name {
-  margin: 0;
-  color: var(--color-primary-brown);
-  font-family: 'Arima', sans-serif;
-  font-size: 1rem;
-  font-weight: 700;
-}
-
-.author-role {
-  margin: 2px 0 12px 0;
-  color: var(--color-primary-brown);
-  font-family: 'Arima', sans-serif;
-  font-size: 1rem;
-  font-weight: 400;
-}
-
-.author-bio {
-  margin: 0;
-  max-width: 45ch;
-  line-height: 1.5;
-  color: var(--color-primary-brown);
-  font-family: 'Palanquin', sans-serif;
-  font-size: 1rem;
-  font-weight: 400;
-}
 
 .content {
   width: 100%;
@@ -173,62 +97,6 @@
 }
 
 @media (min-width: 768px) {
-
-  .top-row {
-    display: flex;
-    align-items: flex-start;
-    gap: 24px;
-    padding: 24px 15px 0 15px;
-  }
-
-  .top-row .card {
-    flex: 1 1 auto;
-    padding: 0;
-    min-width: 0;
-  }
-
-  .top-row .author-card {
-    flex: 0 0 220px;
-    width: 220px;
-    padding: 0;
-    display: block;
-  }
-
-  .author-bg {
-    width: 100%;
-    max-width: none;
-    padding: 16px 14px;
-  }
-
-  .author-avatar {
-    width: 64px;
-    height: 64px;
-    margin-bottom: 8px;
-  }
-
-  .author-name {
-    font-size: 0.8rem;
-  }
-
-  .author-role {
-    font-size: 0.75rem;
-    margin: 2px 0 8px 0;
-  }
-
-  .author-bio {
-    font-size: 0.7rem;
-    max-width: none;
-  }
-
-  .content-columns {
-    display: flex;
-    gap: 24px;
-  }
-
-  .content-columns .content {
-    flex: 1 1 0;
-  }
-
   .graph-wrap {
     max-width: 345px;
     margin-left: auto;
