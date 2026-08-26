@@ -1,106 +1,104 @@
-.wrapper {
-  width: 100%;
-  max-width: 1200px;
-  margin: 0 auto;
-  display: flex;
-  flex-direction: column;
+.graphs-container {
+  padding-inline: var(--container-padding-inline);
   background: #ffffff;
 }
 
-.card {
-  width: 100%;
-  padding: 24px 15px 0px 15px;
-}
-
-.description {
-
-  line-height: 1.5;
-  color: var(--color-primary-brown);
-  font-family: 'Palanquin', sans-serif;
-  font-size: 1.25rem;
-  font-weight: 400;
-}
-
-.meta {
-  margin: 24px 0px;
+.graphs-inner {
+  max-width: 75rem;
+  margin-inline: auto;
   display: flex;
   flex-direction: column;
-  gap: 10px;
-}
-
-.meta-row {
-  display: flex;
-  gap: 1.75rem;
-}
-
-.meta-item {
-  display: flex;
-  align-items: center;
-  gap: 6px;
-  color: var(--color-primary-brown);
-  font-family: 'Palanquin', sans-serif;
-  font-size: 1rem;
-  font-weight: 400;
-  white-space: nowrap;
-}
-
-.icon {
-  width: 16px;
-  height: 16px;
-  object-fit: contain;
-  flex-shrink: 0;
-}
-
-.icon-wide {
-  width: 20px;
-  height: auto;
-}
-
-
-
-
-
-.content {
-  width: 100%;
-  padding: 0 15px 24px 15px;
 }
 
 .section-heading {
-  margin: 24px 0px 10px 0px;
-  color: var(--color-primary-brown);
+  color: var(--color-secondary-brown);
   font-family: 'Arima', sans-serif;
-  font-size: 1.5rem;
+  font-size: clamp(1.25rem, 1.036rem + 1.071vi, 2rem);
   font-weight: 600;
   text-align: center;
+  margin-block: 2rem 1.5rem;
 }
 
 .lorem {
-  margin-bottom: 14px;
-  line-height: 1.6;
-  color: var(--color-primary-brown);
-  font-family: 'Palanquin', sans-serif;
-  font-size: 1rem;
-  font-weight: 400;
+  padding-bottom: 1rem;
+  font-size: clamp(1rem, 0.857rem + 0.714vi, 1.5rem);
 }
 
 .graph-wrap {
   width: 100%;
-  margin: 4px 0px 14px 0px;
+  background-color: #ffffff;
+  border-radius: 1.25rem;
+  box-shadow: -2px 4px 11.6px rgba(0, 0, 0, 0.25);
+
+  margin-inline: auto;
+  max-width: 37.5rem;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.graph-block-top .graph-wrap {
+  margin-bottom: 2rem;
+}
+
+.graph-block-bottom {
+  margin-block: 2rem 1.5rem;
 }
 
 .graph-img {
   display: block;
   width: 100%;
-  height: auto;
-  border-radius: 16px;
+  height: 100%;
+  object-fit: contain;
+  border-radius: 30px;
+}
 
+.graph-columns {
+  display: flex;
+  flex-direction: column;
+  max-width: 70rem;
+  margin: auto;
+}
+
+.graph-columns .graph-wrap {
+  aspect-ratio: 1 / 1;
+  max-width: 25rem;
 }
 
 @media (min-width: 768px) {
-  .graph-wrap {
-    max-width: 345px;
-    margin-left: auto;
-    margin-right: auto;
+  .graph-columns {
+    flex-direction: row;
+    gap: 5rem;
   }
 
+  .graph-img {
+    border-radius: 53px;
+  }
+
+  .graph-column {
+    flex: 1 1 0;
+  }
+
+  .graph-block-top .graph-wrap {
+    max-width: 40rem;
+    margin-bottom: 5.5rem;
+  }
+
+  .graph-columns .graph-wrap {
+    max-width: 31.25rem;
+  }
+
+  .graph-column .lorem {
+    margin-inline: auto;
+    max-width: 31rem;
+  }
+
+  .graph-block-top .section-heading {
+    margin-top: 5.5rem;
+  }
+
+  .graph-block-top p:first-child {
+    margin-top: 3rem;
+  }
 }

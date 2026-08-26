@@ -17,80 +17,172 @@
 /* ALICA HERO UND HIGHLIGHTS CSS 
 */
 
+/* --- GLOBALE STRUKTUR --- */
 .hero2 {
+  max-width: 90rem;
+  margin-inline: auto;
   position: relative;
-  width: 90rem;
   height: 32rem;
   overflow: hidden;
+  background-color: var(--color-primary-yellow);
 }
 
 .hero-bg-yellow {
   position: absolute;
-  left: 0px;
-  top: 0px;
+  left: 0;
+  top: 0;
   z-index: 1;
   background-color: var(--color-primary-yellow);
-  width: 100vw;
-  height: 32rem;
+  width: 100%;
+  /* Korrigiert: % statt vw hält es im 90rem Container */
+  height: 100%;
 }
 
 .hero-bg-picture {
   position: absolute;
-  left: 0px;
-  top: 0px;
+  left: 0;
+  top: 0;
   z-index: 2;
-  height: 32rem;
+  width: 100%;
+  /* Korrigiert: % statt vw */
+  height: 100%;
+  transform: translateX(100%);
+  animation: heroSlideIn 0.7s ease-out 2s forwards;
 }
 
 .hero-bg-picture img {
-  width: 100vw;
-  height: 32rem;
+  width: 100%;
+  height: 100%;
   display: block;
   object-fit: cover;
   object-position: 40% 100%;
 }
 
-.hero-bg-picture img {
-  object-fit: cover;
+@keyframes heroSlideIn {
+  from {
+    transform: translateX(100%);
+  }
+
+  to {
+    transform: translateX(0);
+  }
 }
 
 .hero-element-yellow {
   width: 110rem;
   height: 32rem;
+  background-color: var(--color-primary-yellow);
+  border-radius: 0 0 12rem 0;
   position: absolute;
-  left: -70rem;
-  top: 0px;
+  left: -79rem;
+  top: 0;
   z-index: 3;
+  transform: translateX(100rem);
+  animation: heroSlideInWave 0.7s ease-out 2s forwards;
 }
 
+@keyframes heroSlideInWave {
+  from {
+    transform: translateX(100rem);
+  }
+
+  to {
+    transform: translateX(0);
+  }
+}
+
+/* --- TEXT & PADDING --- */
 .hero-text {
   position: absolute;
-  left: 3rem;
+  /* Das ist dein erzwungenes Padding durch die Variable */
+  left: var(--container-padding-inline);
   top: 5rem;
   z-index: 4;
-  width: 30%;
+  width: 40%;
 }
 
-.hero-text h3 {
+.hero-text h1 {
   font-family: "Arima", sans-serif;
   font-weight: 700;
-  font-size: 3.75rem;
+  font-size: clamp(2rem, 1.65rem + 1.75vi, 3.75rem);
   color: var(--color-secondary-brown);
+  opacity: 0;
+  animation:
+    heroFadeInUp 0.5s ease-out 0s forwards,
+    transitiontoleft 0.5s ease-out 2s forwards;
 }
 
 .hero-text p {
+  max-width: 25rem;
   font-family: "Palanquin", sans-serif;
   font-weight: 500;
   font-size: 1.75rem;
   color: var(--color-secondary-brown);
+  opacity: 0;
+  animation:
+    heroFadeInUp 0.5s ease-out 0.5s forwards,
+    transitiontoleft 0.5s ease-out 2s forwards;
 }
 
+@keyframes heroFadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(8rem) translateX(20rem);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(4rem) translateX(20rem);
+  }
+}
+
+@keyframes transitiontoleft {
+  0% {
+    transform: translateY(4rem) translateX(20rem);
+  }
+
+  100% {
+    transform: translateY(0rem) translateX(0rem);
+  }
+}
+
+/* --- BADGES --- */
 .turkey-badge {
   position: absolute;
-  left: 27rem;
-  top: 17rem;
+  left: 22rem;
+  top: 20rem;
   z-index: 5;
+  opacity: 0;
+  transform: scale(0.6);
+  animation: heroPopIn 0.3s ease-out 2.7s forwards;
+}
+
+.turkey-badge img {
   animation: rotate 20s linear infinite;
+}
+
+.turkey-flag {
+  position: absolute;
+  left: 22rem;
+  top: 20rem;
+  z-index: 6;
+  border-color: red;
+  border-width: 1rem;
+  opacity: 0;
+  transform: scale(0.6);
+  animation: heroPopIn 0.3s ease-out 2.7s forwards;
+}
+
+@keyframes heroPopIn {
+  from {
+    opacity: 0;
+    transform: scale(0.6);
+  }
+
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
 }
 
 @keyframes rotate {
@@ -103,13 +195,97 @@
   }
 }
 
-.turkey-flag {
-  position: absolute;
-  left: 27rem;
-  top: 17rem;
-  z-index: 6;
-  border-color: red;
-  border-width: 1rem;
+/* --- MOBILE KORREKTUR --- */
+@media (max-width: 768px) {
+  .hero-text {
+    width: 65vw;
+    /* Padding-Variable bleibt auch mobil auf der linken Seite erzwungen */
+    left: var(--container-padding-inline);
+    top: 3rem;
+  }
+
+  .hero-text h1 {
+    hyphens: auto;
+    /* FadeOut wird als zweite Animation ab Sekunde 2 gestartet */
+    animation:
+      heroFadeInUpMobile 0.5s ease-out 0s forwards,
+      heroTextFadeOut 0.5s ease-out 2s forwards;
+  }
+
+  .hero-text p {
+    font-size: 1.15rem;
+    width: 100%;
+    /* Selbes FadeOut, ebenfalls ab Sekunde 2 */
+    animation:
+      heroFadeInUpMobile 0.5s ease-out 0.5s forwards,
+      heroTextFadeOut 0.5s ease-out 2s forwards;
+  }
+
+  @keyframes heroFadeInUpMobile {
+    0% {
+      opacity: 0;
+      transform: translateY(2rem);
+    }
+
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  @keyframes heroTextFadeOut {
+    0% {
+      opacity: 1;
+    }
+
+    100% {
+      opacity: 0;
+      /* optional: nimmt das Element komplett aus dem Klick-Bereich, wenn es unsichtbar ist */
+      visibility: hidden;
+    }
+  }
+
+  .hero-bg-picture {
+    left: 0;
+    animation: slideInMobile 0.7s ease-out 2s both;
+  }
+
+  .hero-element-yellow {
+    left: auto;
+    right: 25vw;
+    animation: slideInMobile 0.7s ease-out 2s both;
+  }
+
+  @keyframes slideInMobile {
+    from {
+      transform: translateX(100%);
+    }
+
+    to {
+      transform: translateX(0);
+    }
+  }
+
+  .turkey-badge,
+  .turkey-flag {
+    left: auto;
+    right: 25vw;
+    top: auto;
+    bottom: 2rem;
+    animation: heroPopInMobile 0.3s ease-out 2.7s forwards;
+  }
+
+  @keyframes heroPopInMobile {
+    from {
+      opacity: 0;
+      transform: translateX(50%) scale(0);
+    }
+
+    to {
+      opacity: 1;
+      transform: translateX(50%) scale(0.6);
+    }
+  }
 }
 
 .highlights {
@@ -120,7 +296,17 @@
   width: 100%;
   max-width: 75rem;
   margin-inline: auto;
+
+  p {
+    display: none;
+
+    @media (min-width:768px) {
+      display: revert;
+      padding-bottom: 5.5rem;
+    }
+  }
 }
+
 
 .highlights-headline h2 {
   font-size: 40px;
@@ -163,6 +349,7 @@
 }
 
 .slider_a input {
+  margin-bottom: 2rem;
   z-index: 2;
   padding: 20px;
   appearance: none;
@@ -200,7 +387,7 @@
 }
 
 .element_one img {
-  object-position: 40% 100%;
+  object-position: 40% 80%;
 }
 
 .element_two img {
@@ -225,12 +412,11 @@
 
 .text-block {
   position: absolute;
-  top: 100px;
+  top: clamp(40px, 121px - 6vw, 100px);
   left: 16px;
-  right: 16px;
+  width: min(53rem, calc(100% - 32px));
   z-index: 4;
   padding: 16px;
-  background-color: rgba(255, 255, 255, 0.5);
   background-color: rgba(255, 255, 255, 0.2);
   backdrop-filter: blur(10px);
   border-left: 1px solid white;
@@ -239,7 +425,7 @@
 
 .text-block h3 {
   color: white;
-  font-size: 28px;
+  font-size: clamp(1.75rem, 1.393rem + 1.786vi, 3rem);
   font-family: "Palanquin";
   font-weight: 600;
   line-height: 1;
@@ -248,9 +434,8 @@
 
 .text-block p {
   color: white;
-  font-size: 20px;
+  font-size: clamp(1.25rem, 1.107rem + 0.714vi, 1.75rem);
   font-family: "Palanquin";
-  font-weight: 400;
   line-height: 1.2;
   display: -webkit-box;
   -webkit-box-orient: vertical;
@@ -258,8 +443,6 @@
   line-clamp: 3;
   overflow: hidden;
 }
-
-/* SELIM FAQ CSS */
 
 .faq-section {
   padding-inline: var(--container-padding-inline)
@@ -300,7 +483,6 @@
   padding: 0 8px 8px;
 }
 
-/* Standard-Dreieck des Browsers ausblenden */
 .faq-question {
   background-color: var(--color-primary-yellow);
   width: 100%;
@@ -325,7 +507,6 @@
   display: none;
 }
 
-/* Eigenes Chevron-Icon per CSS */
 .faq-question::after {
   content: "";
   flex-shrink: 0;
@@ -336,7 +517,6 @@
   transform: rotate(45deg);
 }
 
-/* Pfeil zeigt nach oben, wenn Details offen ist */
 .faq-item[open] .faq-question::after {
   transform: rotate(-135deg);
 }
@@ -359,7 +539,6 @@
   color: #333333;
 }
 
-/* Benjamin's Bereich */
 .contact {
   color: var(--color-secondary-brown);
   padding-inline: var(--container-padding-inline);
@@ -530,6 +709,7 @@
   border: none;
   cursor: pointer;
   transition: all 0.2s ease;
+
   &:hover {
     box-shadow: -2px 2px 4px 0px #00000040;
     text-shadow: -2px 2px 4px #00000040;
