@@ -20,13 +20,13 @@ The Travel Blog consists of a homepage with hero, highlights, FAQ, and contact s
 
 ## 🖥️ Page Overview
 
-| File                     | Description                                                                                                         |
-| ------------------------ | ---------------------------------------------------------------------------------------------------------------------- |
-| `index.html`              | Homepage – hero, highlights, FAQ, contact                                                                              |
-| `article-graph.html`      | Article "The World's Most Breathtaking Beaches" with statistics charts (rainy seasons, beach activities, lodging costs) |
-| `article-carousel.html`   | Article "The World's Most Breathtaking Beaches" with a responsive image carousel                                       |
-| `article-video.html`      | Article "Copenhagen in 3 Days" with an embedded video                                                                  |
-| `privacy.html`            | Privacy policy                                                                                                          |
+| File                    | Description                                                                                                             |
+| ----------------------- | ----------------------------------------------------------------------------------------------------------------------- |
+| `index.html`            | Homepage – hero, highlights, FAQ, contact                                                                               |
+| `article-graph.html`    | Article "The World's Most Breathtaking Beaches" with statistics charts (rainy seasons, beach activities, lodging costs) |
+| `article-carousel.html` | Article "The World's Most Breathtaking Beaches" with a responsive image carousel                                        |
+| `article-video.html`    | Article "Copenhagen in 3 Days" with an embedded video                                                                   |
+| `privacy.html`          | Privacy policy                                                                                                          |
 
 ## 🛠️ Tech Stack
 
@@ -62,14 +62,14 @@ blog_group_project/
 
 Central color variables, defined in `assets/css/global.css`:
 
-| Variable                     | Value                      | Usage                                                    |
-| ----------------------------- | -------------------------- | --------------------------------------------------------- |
-| `--color-primary-green`       | `#4EA487`                  | Header/footer background, headings, mobile nav icons     |
-| `--color-primary-yellow`      | `#F1C953`                  | Hero background, mobile bottom nav, button text           |
-| `--color-bg-light-green`      | `rgba(78, 164, 135, 0.2)`  | Author card, pro-tip boxes                                 |
-| `--color-text-main`           | `#3D3D3D`                  | Body text                                                  |
-| `--color-secondary-brown`     | `#54370D`                  | Meta info, author text                                     |
-| `--container-padding-inline`  | `clamp(1rem, 5vi, 4rem)`   | Responsive outer padding                                   |
+| Variable                     | Value                     | Usage                                                |
+| ---------------------------- | ------------------------- | ---------------------------------------------------- |
+| `--color-primary-green`      | `#4EA487`                 | Header/footer background, headings, mobile nav icons |
+| `--color-primary-yellow`     | `#F1C953`                 | Hero background, mobile bottom nav, button text      |
+| `--color-bg-light-green`     | `rgba(78, 164, 135, 0.2)` | Author card, pro-tip boxes                           |
+| `--color-text-main`          | `#3D3D3D`                 | Body text                                            |
+| `--color-secondary-brown`    | `#54370D`                 | Meta info, author text                               |
+| `--container-padding-inline` | `clamp(1rem, 5vi, 4rem)`  | Responsive outer padding                             |
 
 ## 📐 Responsive Behavior
 
