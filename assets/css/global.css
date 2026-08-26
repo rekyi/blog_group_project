@@ -338,7 +338,7 @@ p {
 .site-footer {
   background-color: var(--color-primary-green);
   width: 100%;
-  padding: 3rem;
+  padding: var(--container-padding-inline);
 }
 
 .footer-content {
