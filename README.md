@@ -1,40 +1,40 @@
 # 🌴 Travel Blog
 
-Eine responsive Multi-Page-Website für einen Reiseblog, umgesetzt in reinem **HTML5** und **CSS3** – ohne JavaScript-Framework, ohne Build-Tools. Der Fokus liegt auf einem konsistenten, wiederverwendbaren Design-System (Farben, Typografie, Spacing) über mehrere Artikeltypen hinweg (Text mit Diagrammen, Bildkarussell, Video).
+A responsive multi-page website for a travel blog, built with pure **HTML5** and **CSS3** – no JavaScript framework, no build tools. The focus is on a consistent, reusable design system (colors, typography, spacing) across multiple article types (text with charts, image carousel, video).
 
 ---
 
-## 📖 Über das Projekt
+## 📖 About the Project
 
-Der Travel Blog besteht aus einer Startseite mit Hero-, Highlights-, FAQ- und Kontaktbereich sowie mehreren Artikel-Templates, die unterschiedliche redaktionelle Inhaltstypen abdecken: Statistik-Grafiken, Bildergalerien und eingebettete Videos. Header, Footer und mobile Navigation sind seitenübergreifend konsistent.
+The Travel Blog consists of a homepage with hero, highlights, FAQ, and contact sections, plus several article templates covering different editorial content types: statistics charts, image galleries, and embedded videos. The header, footer, and mobile navigation stay consistent across all pages.
 
 ## ✨ Features
 
-- **Vollständig responsive** – Mobile-first-Ansatz mit Breakpoint bei `768px`
-- **Eigenes Design-System** – zentrale Farb-, Spacing- und Typografie-Variablen in `global.css`
-- **Self-hosted Webfonts** (`Arima`, `Palanquin`, `Palanquin Dark`) im WOFF2-Format – keine externen Font-Requests
-- **Mobile Bottom-Navigation** (fixiert) und **Desktop-Menü**, abhängig vom Breakpoint ein-/ausgeblendet
-- **Wiederverwendbare Komponenten**: Autoren-Karte, Meta-Infos (Datum/Lesezeit/Views/Shares), Footer, Share-Bereich
-- **Mehrere Artikel-Layouts**: Diagramme, responsives Bildkarussell, HTML5-Video mit Poster-Bild
-- **Barrierearme Basics**: `scroll-behavior` respektiert `prefers-reduced-motion`, `alt`-Texte auf allen Bildern, sichtbare Fokus-Zustände auf Links
+- **Fully responsive** – mobile-first approach with a breakpoint at `768px`
+- **Custom design system** – central color, spacing, and typography variables in `global.css`
+- **Self-hosted webfonts** (`Arima`, `Palanquin`, `Palanquin Dark`) in WOFF2 format – no external font requests
+- **Mobile bottom navigation** (fixed) and **desktop menu**, shown/hidden depending on the breakpoint
+- **Reusable components**: author card, meta info (date/reading time/views/shares), footer, share section
+- **Multiple article layouts**: charts, responsive image carousel, HTML5 video with poster image
+- **Basic accessibility**: `scroll-behavior` respects `prefers-reduced-motion`, `alt` text on all images, visible focus states on links
 
-## 🖥️ Seitenübersicht
+## 🖥️ Page Overview
 
-| Datei                   | Beschreibung                                                                                                                 |
-| ----------------------- | ---------------------------------------------------------------------------------------------------------------------------- |
-| `index.html`            | Startseite – Hero, Highlights, FAQ, Kontakt                                                                                  |
-| `article-graph.html`    | Artikel „The World's Most Breathtaking Beaches" mit Statistik-Diagrammen (Regenzeiten, Strandaktivitäten, Unterkunftskosten) |
-| `article-carousel.html` | Artikel „The World's Most Breathtaking Beaches" mit responsivem Bildkarussell                                                |
-| `article-video.html`    | Artikel „Copenhagen in 3 Days" mit eingebettetem Video                                                                       |
-| `privacy.html`          | Datenschutzerklärung                                                                                                         |
+| File                     | Description                                                                                                         |
+| ------------------------ | ---------------------------------------------------------------------------------------------------------------------- |
+| `index.html`              | Homepage – hero, highlights, FAQ, contact                                                                              |
+| `article-graph.html`      | Article "The World's Most Breathtaking Beaches" with statistics charts (rainy seasons, beach activities, lodging costs) |
+| `article-carousel.html`   | Article "The World's Most Breathtaking Beaches" with a responsive image carousel                                       |
+| `article-video.html`      | Article "Copenhagen in 3 Days" with an embedded video                                                                  |
+| `privacy.html`            | Privacy policy                                                                                                          |
 
-## 🛠️ Tech-Stack
+## 🛠️ Tech Stack
 
-- **HTML5** (semantisches Markup: `header`, `nav`, `section`, `article`-Inhalte, `footer`)
-- **CSS3** – Flexbox-Layouts, CSS Custom Properties, `clamp()` für fluid Spacing/Typografie, Media Queries
-- Keine JavaScript-Abhängigkeiten, keine Build-Pipeline – rein statische Auslieferung
+- **HTML5** (semantic markup: `header`, `nav`, `section`, `article` content, `footer`)
+- **CSS3** – Flexbox layouts, CSS Custom Properties, `clamp()` for fluid spacing/typography, media queries
+- No JavaScript dependencies, no build pipeline – purely static delivery
 
-## 📁 Projektstruktur
+## 📁 Project Structure
 
 ```
 blog_group_project/
@@ -46,57 +46,57 @@ blog_group_project/
 ├── README.md
 └── assets/
     ├── css/
-    │   ├── fonts.css              # @font-face Definitionen
-    │   ├── global.css             # Reset, Farbvariablen, Header/Footer, Nav
-    │   ├── index.css              # Styles für die Startseite
-    │   ├── article-graph.css      # Styles für den Diagramm-Artikel
-    │   ├── article-carousel.css   # Styles für den Karussell-Artikel
-    │   └── article-video.css      # Styles für den Video-Artikel
+    │   ├── fonts.css              # @font-face definitions
+    │   ├── global.css             # Reset, color variables, header/footer, nav
+    │   ├── index.css              # Styles for the homepage
+    │   ├── article-graph.css      # Styles for the chart article
+    │   ├── article-carousel.css   # Styles for the carousel article
+    │   └── article-video.css      # Styles for the video article
     ├── fonts/                     # Arima & Palanquin (WOFF2)
-    ├── icon/                      # UI-Icons (SVG)
-    ├── img/                       # Fotos, Illustrationen, Diagramme
-    └── video/                     # Artikel-Video (MP4)
+    ├── icon/                      # UI icons (SVG)
+    ├── img/                       # Photos, illustrations, charts
+    └── video/                     # Article video (MP4)
 ```
 
-## 🎨 Design-Tokens
+## 🎨 Design Tokens
 
-Zentrale Farbvariablen, definiert in `assets/css/global.css`:
+Central color variables, defined in `assets/css/global.css`:
 
-| Variable                     | Wert                      | Verwendung                                                 |
-| ---------------------------- | ------------------------- | ---------------------------------------------------------- |
-| `--color-primary-green`      | `#4EA487`                 | Header/Footer-Hintergrund, Überschriften, mobile Nav-Icons |
-| `--color-primary-yellow`     | `#F1C953`                 | Hero-Hintergrund, mobile Bottom-Nav, Button-Text           |
-| `--color-bg-light-green`     | `rgba(78, 164, 135, 0.2)` | Autoren-Karte, Pro-Tipp-Boxen                              |
-| `--color-text-main`          | `#3D3D3D`                 | Fließtext                                                  |
-| `--color-secondary-brown`    | `#54370D`                 | Meta-Angaben, Autoren-Text                                 |
-| `--container-padding-inline` | `clamp(1rem, 5vi, 4rem)`  | Responsiver Außenabstand                                   |
+| Variable                     | Value                      | Usage                                                    |
+| ----------------------------- | -------------------------- | --------------------------------------------------------- |
+| `--color-primary-green`       | `#4EA487`                  | Header/footer background, headings, mobile nav icons     |
+| `--color-primary-yellow`      | `#F1C953`                  | Hero background, mobile bottom nav, button text           |
+| `--color-bg-light-green`      | `rgba(78, 164, 135, 0.2)`  | Author card, pro-tip boxes                                 |
+| `--color-text-main`           | `#3D3D3D`                  | Body text                                                  |
+| `--color-secondary-brown`     | `#54370D`                  | Meta info, author text                                     |
+| `--container-padding-inline`  | `clamp(1rem, 5vi, 4rem)`   | Responsive outer padding                                   |
 
-## 📐 Responsive Verhalten
+## 📐 Responsive Behavior
 
-- **`< 768px`**: Mobile Navigation (fixierte Bottom-Bar), Desktop-Menü ausgeblendet, einspaltige Inhalte.
-- **`≥ 768px`**: Desktop-Menü im Header sichtbar, mobile Bottom-Bar ausgeblendet, mehrspaltige Content-Bereiche.
-- Inhaltsbreiten auf den Artikelseiten ist begrenzt und zentriert; Header und Footer behalten unabhängig davon ihre volle Breite mit Hintergrundfarbe.
+- **`< 768px`**: Mobile navigation (fixed bottom bar), desktop menu hidden, single-column content.
+- **`≥ 768px`**: Desktop menu visible in the header, mobile bottom bar hidden, multi-column content areas.
+- Content width on the article pages is constrained and centered; the header and footer keep their full width with background color regardless.
 
-## 🚀 Lokal ausführen
+## 🚀 Running Locally
 
-Da es sich um eine rein statische Website handelt, reicht ein einfacher lokaler Webserver (nötig, damit relative Asset-Pfade korrekt aufgelöst werden):
+Since this is a purely static website, a simple local web server is enough:
 
 ```bash
-# Im Projektordner:
+# In the project folder:
 python3 -m http.server 8000
-# Danach im Browser öffnen:
+# Then open in your browser:
 # http://localhost:8000/index.html
 ```
 
-Alternativ z. B. mit der VS-Code-Erweiterung **Live Server**.
+Alternatively, e.g. with the VS Code extension **Live Server**.
 
-## 🔤 Schriftarten
+## 🔤 Fonts
 
-- **Arima** (Gewichte 400/500/600/700) – Überschriften
-- **Palanquin** / **Palanquin Dark** (Gewichte 400/500/600/700) – Fließtext & UI-Elemente
+- **Arima** (weights 400/500/600/700) – headings
+- **Palanquin** / **Palanquin Dark** (weights 400/500/600/700) – body text & UI elements
 
-Beide Schriften liegen lokal im WOFF2-Format unter `assets/fonts/` und werden über `assets/css/fonts.css` eingebunden.
+Both fonts are hosted locally in WOFF2 format under `assets/fonts/` and are included via `assets/css/fonts.css`.
 
-## 📄 Lizenz / Hinweis
+## 📄 License / Note
 
-Dieses Projekt wurde im Rahmen einer Gruppenarbeit erstellt. Platzhalterinhalte (Lorem-Ipsum-Texte, Kontaktformular, Social-Media-Links) dienen ausschließlich Demonstrationszwecken.
+This project was created as part of a group assignment. Placeholder content (lorem ipsum text, contact form, social media links) is for demonstration purposes only.
