@@ -46,7 +46,6 @@
 .top-five-desktop {
     padding-inline: var(---padding-inline);
 
-
     @media (max-width: 768px) {
         display: none;
     }
@@ -145,7 +144,6 @@ h3 {
         display: none;
     }
 }
-
 
 .slider_mobile_container {
     display: flex;

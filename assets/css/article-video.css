@@ -10,26 +10,51 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+}
 
-    video {
-        width: 100%;
-        max-width: 60rem;
-        margin-block: 1.5rem;
-        border-radius: 20px;
-
-        cursor: pointer;
-
-        @media (min-width: 768px) {
-            margin-block: 5rem;
-        }
+@media (min-width: 768px) {
+    .video p {
+        margin-top: 3rem;
     }
+}
+
+.video-frame {
+    width: 100%;
+    max-width: 60rem;
+    margin-block: 1.5rem;
+    border-radius: 15px;
+    overflow: hidden;
+    background: var(--color-bg-light-green);
+
+    cursor: pointer;
+    box-shadow:
+        0 25px 50px -12px rgba(0, 0, 0, 0.5),
+        0 10px 20px -8px rgba(0, 0, 0, 0.3);
+
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 
     @media (min-width: 768px) {
-        p {
-            margin-top: 3rem;
-        }
+        margin-block: 5rem;
     }
+}
 
+.video-frame:hover {
+    transform: scale(1.01);
+    box-shadow:
+        0 35px 60px -12px rgba(64, 192, 160, 0.5),
+        0 15px 25px -8px rgba(0, 0, 0, 0.7);
+}
+
+.video-frame-bar {
+    padding: 0.5rem 0.5rem;
+    background: var(--color-bg-light-green);
+}
+
+.video-frame-title {
+    margin-left: 1rem;
+    font-family: 'Palanquin', sans-serif;
+    font-size: clamp(1rem, 0.857rem + 0.714vi, 1.25rem);
+    color: var(--color-text-main);
 }
 
 .text-container {
@@ -55,7 +80,6 @@
     font-family: 'Palanquin', sans-serif;
     font-size: clamp(1rem, 0.855rem + 0.8vi, 1.5rem);
 
-    /* für punkte der ul */
     li::marker {
         font-size: 0.6em;
     }
