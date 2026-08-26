@@ -20,13 +20,13 @@ Der Travel Blog besteht aus einer Startseite mit Hero-, Highlights-, FAQ- und Ko
 
 ## 🖥️ Seitenübersicht
 
-| Datei | Beschreibung |
-|---|---|
-| `index.html` | Startseite – Hero, Highlights, FAQ, Kontakt |
-| `article-graph.html` | Artikel „The World's Most Breathtaking Beaches" mit Statistik-Diagrammen (Regenzeiten, Strandaktivitäten, Unterkunftskosten) |
-| `article-carousel.html` | Artikel „The World's Most Breathtaking Beaches" mit responsivem Bildkarussell |
-| `article-video.html` | Artikel „Copenhagen in 3 Days" mit eingebettetem Video |
-| `privacy.html` | Datenschutzerklärung |
+| Datei                   | Beschreibung                                                                                                                 |
+| ----------------------- | ---------------------------------------------------------------------------------------------------------------------------- |
+| `index.html`            | Startseite – Hero, Highlights, FAQ, Kontakt                                                                                  |
+| `article-graph.html`    | Artikel „The World's Most Breathtaking Beaches" mit Statistik-Diagrammen (Regenzeiten, Strandaktivitäten, Unterkunftskosten) |
+| `article-carousel.html` | Artikel „The World's Most Breathtaking Beaches" mit responsivem Bildkarussell                                                |
+| `article-video.html`    | Artikel „Copenhagen in 3 Days" mit eingebettetem Video                                                                       |
+| `privacy.html`          | Datenschutzerklärung                                                                                                         |
 
 ## 🛠️ Tech-Stack
 
@@ -62,20 +62,20 @@ blog_group_project/
 
 Zentrale Farbvariablen, definiert in `assets/css/global.css`:
 
-| Variable | Wert | Verwendung |
-|---|---|---|
-| `--color-primary-green` | `#4EA487` | Header/Footer-Hintergrund, Überschriften, mobile Nav-Icons |
-| `--color-primary-yellow` | `#F1C953` | Hero-Hintergrund, mobile Bottom-Nav, Button-Text |
-| `--color-bg-light-green` | `rgba(78, 164, 135, 0.2)` | Autoren-Karte, Pro-Tipp-Boxen |
-| `--color-text-main` | `#3D3D3D` | Fließtext |
-| `--color-secondary-brown` | `#54370D` | Meta-Angaben, Autoren-Text |
-| `--container-padding-inline` | `clamp(1rem, 5vi, 4rem)` | Responsiver Außenabstand |
+| Variable                     | Wert                      | Verwendung                                                 |
+| ---------------------------- | ------------------------- | ---------------------------------------------------------- |
+| `--color-primary-green`      | `#4EA487`                 | Header/Footer-Hintergrund, Überschriften, mobile Nav-Icons |
+| `--color-primary-yellow`     | `#F1C953`                 | Hero-Hintergrund, mobile Bottom-Nav, Button-Text           |
+| `--color-bg-light-green`     | `rgba(78, 164, 135, 0.2)` | Autoren-Karte, Pro-Tipp-Boxen                              |
+| `--color-text-main`          | `#3D3D3D`                 | Fließtext                                                  |
+| `--color-secondary-brown`    | `#54370D`                 | Meta-Angaben, Autoren-Text                                 |
+| `--container-padding-inline` | `clamp(1rem, 5vi, 4rem)`  | Responsiver Außenabstand                                   |
 
 ## 📐 Responsive Verhalten
 
-- **`< 768px`**: mobile Navigation (fixierte Bottom-Bar), Desktop-Menü ausgeblendet, einspaltige Inhalte
-- **`≥ 768px`**: Desktop-Menü im Header sichtbar, mobile Bottom-Bar ausgeblendet, mehrspaltige Content-Bereiche (z. B. „Popular beach activities" / „Accommodation expenses" nebeneinander)
-- Inhaltsbreite auf den Artikelseiten ist auf `1200px` begrenzt und zentriert; Header und Footer behalten unabhängig davon ihre volle Breite mit Hintergrundfarbe
+- **`< 768px`**: Mobile Navigation (fixierte Bottom-Bar), Desktop-Menü ausgeblendet, einspaltige Inhalte.
+- **`≥ 768px`**: Desktop-Menü im Header sichtbar, mobile Bottom-Bar ausgeblendet, mehrspaltige Content-Bereiche.
+- Inhaltsbreiten auf den Artikelseiten ist begrenzt und zentriert; Header und Footer behalten unabhängig davon ihre volle Breite mit Hintergrundfarbe.
 
 ## 🚀 Lokal ausführen
 
