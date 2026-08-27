@@ -516,7 +516,7 @@
   border-right: 0.125rem solid #1a1a1a;
   border-bottom: 0.125rem solid #1a1a1a;
   transform: rotate(45deg);
-  transition: transform 0.5s ease;
+  transition: transform 0.7s ease;
 }
 
 .faq-item[open] .faq-question::after {
