@@ -84,6 +84,13 @@ p {
   }
 }
 
+body {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+}
+
 .nav-bar {
   display: flex;
   list-style-type: none;
@@ -208,7 +215,7 @@ p {
 }
 
 .kicker {
-  margin: 0 0 6px 0;
+  margin: 2rem 0 0.5rem 0;
   font-family: "Palanquin", sans-serif;
   font-size: clamp(1.25rem, 0.893rem + 1.786vi, 2.5rem);
   font-weight: 600;
@@ -339,6 +346,7 @@ p {
   background-color: var(--color-primary-green);
   width: 100%;
   padding: var(--container-padding-inline);
+  margin-top: auto;
 }
 
 .footer-content {
